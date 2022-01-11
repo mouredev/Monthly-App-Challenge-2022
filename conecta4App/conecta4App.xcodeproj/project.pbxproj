@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26C7B520278E209700859E2B /* conecta4AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B51F278E209700859E2B /* conecta4AppApp.swift */; };
+		26C7B522278E209700859E2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B521278E209700859E2B /* ContentView.swift */; };
+		26C7B524278E209800859E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C7B523278E209800859E2B /* Assets.xcassets */; };
+		26C7B527278E209900859E2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C7B526278E209900859E2B /* Preview Assets.xcassets */; };
+		26C7B531278E209900859E2B /* conecta4AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B530278E209900859E2B /* conecta4AppTests.swift */; };
+		26C7B53B278E209900859E2B /* conecta4AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B53A278E209900859E2B /* conecta4AppUITests.swift */; };
+		26C7B53D278E209900859E2B /* conecta4AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B53C278E209900859E2B /* conecta4AppUITestsLaunchTests.swift */; };
+		26C7B552278E20C100859E2B /* Turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B549278E20C000859E2B /* Turn.swift */; };
+		26C7B553278E20C100859E2B /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B54A278E20C000859E2B /* Coordinate.swift */; };
+		26C7B554278E20C100859E2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B54B278E20C000859E2B /* ContentView.swift */; };
+		26C7B555278E20C100859E2B /* AwayPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B54C278E20C000859E2B /* AwayPlayer.swift */; };
+		26C7B556278E20C100859E2B /* LocalPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B54D278E20C000859E2B /* LocalPlayer.swift */; };
+		26C7B557278E20C100859E2B /* NullPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B54E278E20C000859E2B /* NullPlayer.swift */; };
+		26C7B558278E20C100859E2B /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B54F278E20C100859E2B /* Board.swift */; };
+		26C7B559278E20C100859E2B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B550278E20C100859E2B /* Player.swift */; };
+		26C7B55A278E20C100859E2B /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7B551278E20C100859E2B /* CellView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26C7B52D278E209900859E2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26C7B514278E209600859E2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26C7B51B278E209700859E2B;
+			remoteInfo = conecta4App;
+		};
+		26C7B537278E209900859E2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26C7B514278E209600859E2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26C7B51B278E209700859E2B;
+			remoteInfo = conecta4App;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26C7B51C278E209700859E2B /* conecta4App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = conecta4App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26C7B51F278E209700859E2B /* conecta4AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conecta4AppApp.swift; sourceTree = "<group>"; };
+		26C7B521278E209700859E2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		26C7B523278E209800859E2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26C7B526278E209900859E2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		26C7B52C278E209900859E2B /* conecta4AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = conecta4AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26C7B530278E209900859E2B /* conecta4AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conecta4AppTests.swift; sourceTree = "<group>"; };
+		26C7B536278E209900859E2B /* conecta4AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = conecta4AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26C7B53A278E209900859E2B /* conecta4AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conecta4AppUITests.swift; sourceTree = "<group>"; };
+		26C7B53C278E209900859E2B /* conecta4AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conecta4AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		26C7B549278E20C000859E2B /* Turn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Turn.swift; sourceTree = "<group>"; };
+		26C7B54A278E20C000859E2B /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		26C7B54B278E20C000859E2B /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../../../moureJanuary/conecta4/ContentView.swift; sourceTree = "<group>"; };
+		26C7B54C278E20C000859E2B /* AwayPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwayPlayer.swift; sourceTree = "<group>"; };
+		26C7B54D278E20C000859E2B /* LocalPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalPlayer.swift; sourceTree = "<group>"; };
+		26C7B54E278E20C000859E2B /* NullPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullPlayer.swift; sourceTree = "<group>"; };
+		26C7B54F278E20C100859E2B /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		26C7B550278E20C100859E2B /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		26C7B551278E20C100859E2B /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26C7B519278E209700859E2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26C7B529278E209900859E2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26C7B533278E209900859E2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26C7B513278E209600859E2B = {
+			isa = PBXGroup;
+			children = (
+				26C7B51E278E209700859E2B /* conecta4App */,
+				26C7B52F278E209900859E2B /* conecta4AppTests */,
+				26C7B539278E209900859E2B /* conecta4AppUITests */,
+				26C7B51D278E209700859E2B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26C7B51D278E209700859E2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26C7B51C278E209700859E2B /* conecta4App.app */,
+				26C7B52C278E209900859E2B /* conecta4AppTests.xctest */,
+				26C7B536278E209900859E2B /* conecta4AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26C7B51E278E209700859E2B /* conecta4App */ = {
+			isa = PBXGroup;
+			children = (
+				26C7B54C278E20C000859E2B /* AwayPlayer.swift */,
+				26C7B54F278E20C100859E2B /* Board.swift */,
+				26C7B551278E20C100859E2B /* CellView.swift */,
+				26C7B54B278E20C000859E2B /* ContentView.swift */,
+				26C7B54A278E20C000859E2B /* Coordinate.swift */,
+				26C7B54D278E20C000859E2B /* LocalPlayer.swift */,
+				26C7B54E278E20C000859E2B /* NullPlayer.swift */,
+				26C7B550278E20C100859E2B /* Player.swift */,
+				26C7B549278E20C000859E2B /* Turn.swift */,
+				26C7B51F278E209700859E2B /* conecta4AppApp.swift */,
+				26C7B521278E209700859E2B /* ContentView.swift */,
+				26C7B523278E209800859E2B /* Assets.xcassets */,
+				26C7B525278E209900859E2B /* Preview Content */,
+			);
+			path = conecta4App;
+			sourceTree = "<group>";
+		};
+		26C7B525278E209900859E2B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				26C7B526278E209900859E2B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		26C7B52F278E209900859E2B /* conecta4AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				26C7B530278E209900859E2B /* conecta4AppTests.swift */,
+			);
+			path = conecta4AppTests;
+			sourceTree = "<group>";
+		};
+		26C7B539278E209900859E2B /* conecta4AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				26C7B53A278E209900859E2B /* conecta4AppUITests.swift */,
+				26C7B53C278E209900859E2B /* conecta4AppUITestsLaunchTests.swift */,
+			);
+			path = conecta4AppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26C7B51B278E209700859E2B /* conecta4App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26C7B540278E209900859E2B /* Build configuration list for PBXNativeTarget "conecta4App" */;
+			buildPhases = (
+				26C7B518278E209700859E2B /* Sources */,
+				26C7B519278E209700859E2B /* Frameworks */,
+				26C7B51A278E209700859E2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = conecta4App;
+			productName = conecta4App;
+			productReference = 26C7B51C278E209700859E2B /* conecta4App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		26C7B52B278E209900859E2B /* conecta4AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26C7B543278E209900859E2B /* Build configuration list for PBXNativeTarget "conecta4AppTests" */;
+			buildPhases = (
+				26C7B528278E209900859E2B /* Sources */,
+				26C7B529278E209900859E2B /* Frameworks */,
+				26C7B52A278E209900859E2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26C7B52E278E209900859E2B /* PBXTargetDependency */,
+			);
+			name = conecta4AppTests;
+			productName = conecta4AppTests;
+			productReference = 26C7B52C278E209900859E2B /* conecta4AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		26C7B535278E209900859E2B /* conecta4AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26C7B546278E209900859E2B /* Build configuration list for PBXNativeTarget "conecta4AppUITests" */;
+			buildPhases = (
+				26C7B532278E209900859E2B /* Sources */,
+				26C7B533278E209900859E2B /* Frameworks */,
+				26C7B534278E209900859E2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26C7B538278E209900859E2B /* PBXTargetDependency */,
+			);
+			name = conecta4AppUITests;
+			productName = conecta4AppUITests;
+			productReference = 26C7B536278E209900859E2B /* conecta4AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26C7B514278E209600859E2B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					26C7B51B278E209700859E2B = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					26C7B52B278E209900859E2B = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 26C7B51B278E209700859E2B;
+					};
+					26C7B535278E209900859E2B = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 26C7B51B278E209700859E2B;
+					};
+				};
+			};
+			buildConfigurationList = 26C7B517278E209600859E2B /* Build configuration list for PBXProject "conecta4App" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26C7B513278E209600859E2B;
+			productRefGroup = 26C7B51D278E209700859E2B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26C7B51B278E209700859E2B /* conecta4App */,
+				26C7B52B278E209900859E2B /* conecta4AppTests */,
+				26C7B535278E209900859E2B /* conecta4AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26C7B51A278E209700859E2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26C7B527278E209900859E2B /* Preview Assets.xcassets in Resources */,
+				26C7B524278E209800859E2B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26C7B52A278E209900859E2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26C7B534278E209900859E2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26C7B518278E209700859E2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26C7B55A278E20C100859E2B /* CellView.swift in Sources */,
+				26C7B555278E20C100859E2B /* AwayPlayer.swift in Sources */,
+				26C7B556278E20C100859E2B /* LocalPlayer.swift in Sources */,
+				26C7B522278E209700859E2B /* ContentView.swift in Sources */,
+				26C7B557278E20C100859E2B /* NullPlayer.swift in Sources */,
+				26C7B554278E20C100859E2B /* ContentView.swift in Sources */,
+				26C7B552278E20C100859E2B /* Turn.swift in Sources */,
+				26C7B520278E209700859E2B /* conecta4AppApp.swift in Sources */,
+				26C7B553278E20C100859E2B /* Coordinate.swift in Sources */,
+				26C7B559278E20C100859E2B /* Player.swift in Sources */,
+				26C7B558278E20C100859E2B /* Board.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26C7B528278E209900859E2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26C7B531278E209900859E2B /* conecta4AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26C7B532278E209900859E2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26C7B53B278E209900859E2B /* conecta4AppUITests.swift in Sources */,
+				26C7B53D278E209900859E2B /* conecta4AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26C7B52E278E209900859E2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26C7B51B278E209700859E2B /* conecta4App */;
+			targetProxy = 26C7B52D278E209900859E2B /* PBXContainerItemProxy */;
+		};
+		26C7B538278E209900859E2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26C7B51B278E209700859E2B /* conecta4App */;
+			targetProxy = 26C7B537278E209900859E2B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		26C7B53E278E209900859E2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		26C7B53F278E209900859E2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26C7B541278E209900859E2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"conecta4App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nttdata.conecta4App;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		26C7B542278E209900859E2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"conecta4App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nttdata.conecta4App;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		26C7B544278E209900859E2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nttdata.conecta4AppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/conecta4App.app/conecta4App";
+			};
+			name = Debug;
+		};
+		26C7B545278E209900859E2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nttdata.conecta4AppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/conecta4App.app/conecta4App";
+			};
+			name = Release;
+		};
+		26C7B547278E209900859E2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nttdata.conecta4AppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = conecta4App;
+			};
+			name = Debug;
+		};
+		26C7B548278E209900859E2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nttdata.conecta4AppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = conecta4App;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26C7B517278E209600859E2B /* Build configuration list for PBXProject "conecta4App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26C7B53E278E209900859E2B /* Debug */,
+				26C7B53F278E209900859E2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26C7B540278E209900859E2B /* Build configuration list for PBXNativeTarget "conecta4App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26C7B541278E209900859E2B /* Debug */,
+				26C7B542278E209900859E2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26C7B543278E209900859E2B /* Build configuration list for PBXNativeTarget "conecta4AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26C7B544278E209900859E2B /* Debug */,
+				26C7B545278E209900859E2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26C7B546278E209900859E2B /* Build configuration list for PBXNativeTarget "conecta4AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26C7B547278E209900859E2B /* Debug */,
+				26C7B548278E209900859E2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26C7B514278E209600859E2B /* Project object */;
+}
