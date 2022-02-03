@@ -9,7 +9,7 @@ También existen repositorios tanto para Kotlin/Android como para Swift/iOS en l
 [![GitHub Followers](https://img.shields.io/github/stars/mouredev/Weekly-Challenge-2022-Swift?label=Repositorio%20público%20retos%20Swift/iOS&style=social)](https://github.com/mouredev/Weekly-Challenge-2022-Swift)
 
 ### El proyecto
-La idea principal es utilizar este proyecto para publicar retos de creación de Apps y soluciones en diferentes tecnologías (principalmente iOS y Android, aunque si quieres puedes hacerlo via web/desktop). Es una manera para intentar "forzarnos" a practicar desarrollo de aplicaciones en base a requisitos y de forma colaborativa dentro de la comunidad.
+La idea principal es utilizar este proyecto para publicar retos de creación de pequeñas Apps y soluciones en diferentes tecnologías (principalmente iOS y Android, aunque si quieres puedes hacerlo via web/desktop). Es una manera para intentar "forzarnos" a practicar desarrollo de aplicaciones en base a requisitos y de forma colaborativa dentro de la comunidad.
 
 ## Listado de retos
 ### Enero (03/01/22 - 31/01/22)
