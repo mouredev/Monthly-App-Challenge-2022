@@ -8,9 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var model = PeopleListViewModel()
+    
+    fileprivate func row(_ people: PeopleModel) -> some View {
+        HStack{
+            Text("\(people.name)")
+        }
+    }
+    
+    fileprivate func list() -> some View {
+        List {
+            ForEach(model.peoples.results){ item in
+                row(item)
+            }
+        }
+        .navigationTitle("Peoples")
+        .task {
+            model.all()
+        }
+        .alert("Error", isPresented: $model.hasError) {
+        } message: {
+            Text(model.errorMessage)
+        }
+    }
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        list()
     }
 }
 
