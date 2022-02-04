@@ -9,6 +9,6 @@ import Foundation
 
 class NullPlayer: Player {
     init() {
-        super.init(color: .white, name: "")
+        super.init(color: .clear, name: "")
     }
 }

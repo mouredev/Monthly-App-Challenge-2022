@@ -20,19 +20,26 @@ struct CellView: View {
     @State private var background = Color.white
     var body: some View {
         GeometryReader { metrics in
-            let top: CGFloat = 5
+            let top: CGFloat = 2
             let height: CGFloat = metrics.size.height - (top *  2.0)
-            let left: CGFloat = (metrics.size.width - height) / 2.0
-            Button {
-                self.click()
-            } label: {
-                Text(" ")
-                    .frame(width: height, height: height)
-                    .background(self.coordinate.getColor())
-                    .animation(.easeInOut(duration: 0.5), value: self.coordinate.getColor())
-                    .cornerRadius(height)
-                    .padding(EdgeInsets(top: top, leading: left, bottom: top, trailing: left))
-            }.accessibility(identifier: "buttonCell_\(x)_\(y)")
+            let left: CGFloat = 2
+            ZStack {
+                Button {
+                    self.click()
+                } label: {
+                    Text(" ")
+                        .frame(width: height, height: height)
+                        .background(self.coordinate.getColor())
+                        .animation(.easeInOut(duration: 0.5), value: self.coordinate.getColor())
+                        .padding(EdgeInsets(top: top, leading: left, bottom: top, trailing: left))
+                }.accessibility(identifier: "buttonCell_\(x)_\(y)")
+                Button {
+                    self.click()
+                } label: {
+                    Image("celda").resizable().frame(width: metrics.size.width, height: metrics.size.height)
+                        .scaledToFill()
+                }
+            }
         }
     }
     

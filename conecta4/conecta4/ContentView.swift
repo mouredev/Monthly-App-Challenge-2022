@@ -73,38 +73,38 @@ struct ContentView: View {
         
         func printSingleLine(width: CGFloat) -> some View {
             Text("")
-                .frame(width: width, height: 1.0)
-                .background(self.turn.player.color.opacity(0.5))
+                .frame(width: width, height: 2.0)
+                .background(self.turn.player.color)
                 .animation(.easeInOut(duration: 0.5), value: self.turn.player.color)
                 .accessibility(identifier: "singleLine")
         }
         
         func printBoard(size: CGSize) -> some View {
             let itemSize = size.width/CGFloat(self.board.width)
-            return HStack(alignment: .center, spacing: 2) {
+            return HStack(alignment: .center, spacing: 0) {
                 self.printColumns(itemSize: itemSize)
             }.frame(
                 width: itemSize * CGFloat(self.board.width),
                 height: itemSize * CGFloat(self.board.height)
-            ).background(self.turn.player.color.opacity(0.5))
+            ).background(self.turn.player.color)
                 .animation(.easeInOut(duration: 0.5), value: self.turn.player.color)
         }
         
         func printColumns(itemSize: CGFloat) -> some View {
             ForEach(0 ..< ContentView.width) { j in
-                VStack(alignment: .center, spacing: 1) {
+                VStack(alignment: .center, spacing: 0) {
                     ForEach(0 ..< ContentView.height) { i in
                         self.printCell(x: i, y: j)
                     }
                 }.frame(
-                    width: itemSize-2,
+                    width: itemSize,
                     alignment: .topLeading
                 )
             }
         }
         
         func printCell(x: Int, y: Int) -> some View {
-            return CellView(x: x, y: y, coordinate: self.board.get(x, y), delegate: self).background(.blue).cornerRadius(5)
+            return CellView(x: x, y: y, coordinate: self.board.get(x, y), delegate: self).background(.blue)//.cornerRadius(5)
         }
         
         var body: some View {
