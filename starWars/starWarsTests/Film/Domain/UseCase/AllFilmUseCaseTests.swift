@@ -1,25 +1,25 @@
 //
-//  AllStarshipUseCaseTests.swift
+//  AllFilmUseCaseTests.swift
 //  starWarsTests
 //
-//  Created by Diego Alberto Dominguez Herreros on 4/2/22.
+//  Created by Diego Alberto Dominguez Herreros on 5/2/22.
 //
 
 import XCTest
 @testable import starWars
 
-class AllStarshipUseCaseTests: XCTestCase {
+class AllFilmUseCaseTests: XCTestCase {
 
     func testExecute() throws {
         let expectation = self.expectation(description: "Search")
-        let useCase = AllStarshipUseCase(repository: StarshipRepositoryImpl(dataSource: StarshipAPIImpl()))
+        let useCase = AllFilmUseCase(repository: FilmRepositoryImpl(dataSource: FilmAPIImpl()))
         useCase.execute {
             switch $0 {
             case .success(let result):
                 XCTAssertGreaterThan(result.count, 0)
                 XCTAssertEqual(result.previous, String.Empty)
-                XCTAssertEqual(result.next, "https://swapi.dev/api/starships/?page=2")
-                XCTAssertEqual(result.results.count, 10)
+                XCTAssertEqual(result.next, String.Empty)
+                XCTAssertEqual(result.results.count, 6)
                 expectation.fulfill()
             case .failure(_):
                 XCTFail()

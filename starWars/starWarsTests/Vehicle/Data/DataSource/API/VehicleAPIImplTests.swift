@@ -1,22 +1,22 @@
 //
-//  PeopleAPIImplTests.swift
+//  VehicleAPIImplTests.swift
 //  starWarsTests
 //
-//  Created by Diego Alberto Dominguez Herreros on 4/2/22.
+//  Created by Diego Alberto Dominguez Herreros on 5/2/22.
 //
 
 import XCTest
 @testable import starWars
 
-class PeopleAPIImplTests: XCTestCase {
+class VehicleAPIImplTests: XCTestCase {
 
     func testSearch() throws {
         let expectation = self.expectation(description: "Search")
-        PeopleAPIImpl().search(
+        VehicleAPIImpl().search(
             completion: { result in
                 XCTAssertGreaterThan(result.count, 0)
                 XCTAssertEqual(result.previous, String.Empty)
-                XCTAssertEqual(result.next, "https://swapi.dev/api/people/?page=2")
+                XCTAssertEqual(result.next, "https://swapi.dev/api/vehicles/?page=2")
                 XCTAssertEqual(result.results.count, 10)
                 expectation.fulfill()
             },
@@ -26,16 +26,16 @@ class PeopleAPIImplTests: XCTestCase {
             })
         waitForExpectations(timeout: 10, handler: nil)
     }
-
+    
     func testSearchWithFilter() throws {
         let expectation = self.expectation(description: "Search")
-        PeopleAPIImpl().search(
-            value: "luke",
+        VehicleAPIImpl().search(
+            value: "on",
             completion: { result in
-                XCTAssertEqual(result.count, 1)
+                XCTAssertEqual(result.count, 8)
                 XCTAssertEqual(result.previous, String.Empty)
                 XCTAssertEqual(result.next, String.Empty)
-                XCTAssertEqual(result.results.count, 1)
+                XCTAssertEqual(result.results.count, 8)
                 expectation.fulfill()
             },
             failure: { _ in
@@ -47,12 +47,12 @@ class PeopleAPIImplTests: XCTestCase {
     
     func testPage() throws {
         let expectation = self.expectation(description: "Search")
-        PeopleAPIImpl().page(
-            url: "https://swapi.dev/api/people/?page=5",
+        VehicleAPIImpl().page(
+            url: "https://swapi.dev/api/vehicles/?page=2",
             completion: { result in
                 XCTAssertGreaterThan(result.count, 0)
-                XCTAssertEqual(result.previous, "https://swapi.dev/api/people/?page=4")
-                XCTAssertEqual(result.next, "https://swapi.dev/api/people/?page=6")
+                XCTAssertEqual(result.previous, "https://swapi.dev/api/vehicles/?page=1")
+                XCTAssertEqual(result.next, "https://swapi.dev/api/vehicles/?page=3")
                 XCTAssertEqual(result.results.count, 10)
                 expectation.fulfill()
             },
