@@ -1,5 +1,5 @@
 //
-//  PlanetListView.swift
+//  PeopleListView.swift
 //  starWars
 //
 //  Created by Diego Alberto Dominguez Herreros on 4/2/22.
@@ -7,19 +7,21 @@
 
 import SwiftUI
 
-struct PlanetListView: View {
-
-    @StateObject var model = PlanetListViewModel()
+struct PeopleListView: View {
     
-    fileprivate func row(_ people: PlanetModel) -> some View {
+    @StateObject var model = PeopleListViewModel()
+    
+    fileprivate func row(_ people: PeopleModel) -> some View {
         HStack{
-            Text("\(people.name)")
+            NavigationLink(destination: PeopleRouter.showDetail(people: people)) {
+                Text("\(people.name)")
+            }
         }
     }
     
     fileprivate func list() -> some View {
         List {
-            ForEach(model.planets.results){ item in
+            ForEach(model.peoples.results){ item in
                 row(item)
             }
         }
@@ -39,8 +41,8 @@ struct PlanetListView: View {
     }
 }
 
-struct PlanetListView_Previews: PreviewProvider {
+struct PeopleListView_Previews: PreviewProvider {
     static var previews: some View {
-        PlanetListView()
+        PeopleListView()
     }
 }

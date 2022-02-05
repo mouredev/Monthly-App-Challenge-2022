@@ -12,7 +12,7 @@ class PlanetListViewModel: ObservableObject {
     let allUseCase = AllPlanetUseCase(repository: PlanetRepositoryImpl(dataSource: PlanetAPIImpl()))
     let filterUserCase = FilterPlanetUseCase(repository: PlanetRepositoryImpl(dataSource: PlanetAPIImpl()))
     let pageUseCase = PagePlanetUseCase(repository: PlanetRepositoryImpl(dataSource: PlanetAPIImpl()))
-    @Published var planets: PlanetListModel = PlanetListModel.Empty
+    @Published var planets: PlanetListModel = PlanetListModel.NullObject
     @Published var errorMessage = ""
     @Published var hasError = false
     
@@ -55,7 +55,7 @@ class PlanetListViewModel: ObservableObject {
         case .success(let planets):
             self.planets = planets
         case .failure(let error):
-            self.planets = PlanetListModel.Empty
+            self.planets = PlanetListModel.NullObject
             self.errorMessage = error.localizedDescription
             self.hasError = true
         }

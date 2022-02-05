@@ -45,7 +45,7 @@ struct PeopleAPIImpl: PeopleDataSource {
                 return
             }
 
-            guard let result = try? JSONDecoder().decode(PeopleAPIEntity.self, from: data) else {
+            guard let result = try? JSONDecoder().decode(PeopleListAPIEntity.self, from: data) else {
                 failure(APIException.decodingError)
                 return
             }
@@ -56,6 +56,37 @@ struct PeopleAPIImpl: PeopleDataSource {
                 previous: result.previous ?? String.Empty,
                 results: result.results
             ))
+        }.resume()
+    }
+
+    func detail(url urlValue: String, completion: @escaping (PeopleModel) -> Void, failure: @escaping (Error) -> Void) {
+        assert(urlValue.contains(PeopleAPIImpl.domain))
+        guard let url = URL(string: urlValue) else{
+            failure(APIException.badUrl)
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let exception = error, error != nil {
+                failure(exception)
+            }
+
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                failure(APIException.statusNotOK)
+                return
+            }
+
+            guard let data = data, !data.isEmpty else {
+                failure(APIException.decodingError)
+                return
+            }
+
+            guard let result = try? JSONDecoder().decode(PeopleModel.self, from: data) else {
+                failure(APIException.decodingError)
+                return
+            }
+
+            completion(result)
         }.resume()
     }
 }

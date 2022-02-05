@@ -1,5 +1,5 @@
 //
-//  StarshipListView.swift
+//  PlanetListView.swift
 //  starWars
 //
 //  Created by Diego Alberto Dominguez Herreros on 4/2/22.
@@ -7,24 +7,26 @@
 
 import SwiftUI
 
-struct StarshipListView: View {
+struct PlanetListView: View {
+
+    @StateObject var model = PlanetListViewModel()
     
-    @StateObject var model = StarshipListViewModel()
-    
-    fileprivate func row(_ people: StarshipModel) -> some View {
+    fileprivate func row(_ planet: PlanetModel) -> some View {
         HStack{
-            Text("\(people.name)")
+            NavigationLink(destination: PlanetRouter.showDetail(planet: planet)) {
+                Text("\(planet.name)")
+            }
         }
     }
     
     fileprivate func list() -> some View {
         List {
-            ForEach(model.starships.results){ item in
+            ForEach(model.planets.results){ item in
                 row(item)
             }
         }
         .background(Color(.clear))
-        .navigationTitle("Starships")
+        .navigationTitle("Planets")
         .task {
             model.all()
         }
@@ -39,8 +41,8 @@ struct StarshipListView: View {
     }
 }
 
-struct StarshipListView_Previews: PreviewProvider {
+struct PlanetListView_Previews: PreviewProvider {
     static var previews: some View {
-        StarshipListView()
+        PlanetListView()
     }
 }

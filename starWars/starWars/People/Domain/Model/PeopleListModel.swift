@@ -15,7 +15,7 @@ struct PeopleListModel {
 }
 
 extension PeopleListModel {
-    static let Empty: PeopleListModel = PeopleListModel(
+    static let NullObject: PeopleListModel = PeopleListModel(
         count: Int.zero,
         next: String.Empty,
         previous: String.Empty,

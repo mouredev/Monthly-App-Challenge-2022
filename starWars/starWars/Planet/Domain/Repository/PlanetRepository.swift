@@ -11,4 +11,5 @@ protocol PlanetRepository {
     func page(url: String, completion: @escaping (PlanetListModel) -> Void, failure: @escaping (Error) -> Void)
     func search(completion: @escaping (PlanetListModel) -> Void, failure: @escaping (Error) -> Void)
     func search(value: String, completion: @escaping (PlanetListModel) -> Void, failure: @escaping (Error) -> Void)
+    func detail(url: String, completion: @escaping (PlanetModel) -> Void, failure: @escaping (Error) -> Void)
 }

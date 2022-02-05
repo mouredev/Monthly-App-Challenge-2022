@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PlanetAPIEntity: Codable {
+struct PlanetListAPIEntity: Codable {
     var count: Int
     var next: String?
     var previous: String?

@@ -12,7 +12,7 @@ class StarshipListViewModel: ObservableObject {
     let allUseCase = AllStarshipUseCase(repository: StarshipRepositoryImpl(dataSource: StarshipAPIImpl()))
     let filterUserCase = FilterStarshipUseCase(repository: StarshipRepositoryImpl(dataSource: StarshipAPIImpl()))
     let pageUseCase = PageStarshipUseCase(repository: StarshipRepositoryImpl(dataSource: StarshipAPIImpl()))
-    @Published var starships: StarshipListModel = StarshipListModel.Empty
+    @Published var starships: StarshipListModel = StarshipListModel.NullObject
     @Published var errorMessage = ""
     @Published var hasError = false
     
@@ -55,7 +55,7 @@ class StarshipListViewModel: ObservableObject {
         case .success(let starships):
             self.starships = starships
         case .failure(let error):
-            self.starships = StarshipListModel.Empty
+            self.starships = StarshipListModel.NullObject
             self.errorMessage = error.localizedDescription
             self.hasError = true
         }

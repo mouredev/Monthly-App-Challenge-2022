@@ -23,4 +23,7 @@ struct PeopleRepositoryImpl: PeopleRepository {
         self.dataSource.search(value: value, completion: completion, failure: failure)
     }
 
+    func detail(url: String, completion: @escaping (PeopleModel) -> Void, failure: @escaping (Error) -> Void) {
+        self.dataSource.detail(url: url, completion: completion, failure: failure)
+    }
 }

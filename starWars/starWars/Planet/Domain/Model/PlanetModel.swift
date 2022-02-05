@@ -41,3 +41,21 @@ struct PlanetModel: Codable, Identifiable {
         case url
     }
 }
+
+extension PlanetModel {
+    static let NullObject: PlanetModel = PlanetModel.init(
+        name: String.Empty,
+        rotationPeriod: String.Empty,
+        orbitalPeriod: String.Empty,
+        diameter: String.Empty,
+        climate: String.Empty,
+        gravity: String.Empty,
+        terrain: String.Empty,
+        surfaceWater: String.Empty,
+        population: String.Empty,
+        residents: [],
+        films: [],
+        created: String.Empty,
+        edited: String.Empty,
+        url: String.Empty)
+}

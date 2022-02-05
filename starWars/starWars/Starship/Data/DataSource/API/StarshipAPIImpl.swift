@@ -46,7 +46,7 @@ struct StarshipAPIImpl: StarshipDataSource {
                 return
             }
             
-            guard let result = try? JSONDecoder().decode(StarshipAPIEntity.self, from: data) else {
+            guard let result = try? JSONDecoder().decode(StarshipListAPIEntity.self, from: data) else {
                 failure(APIException.decodingError)
                 return
             }
@@ -60,4 +60,34 @@ struct StarshipAPIImpl: StarshipDataSource {
         }.resume()
     }
 
+    func detail(url urlValue: String, completion: @escaping (StarshipModel) -> Void, failure: @escaping (Error) -> Void) {
+        assert(urlValue.contains(StarshipAPIImpl.domain))
+        guard let url = URL(string: urlValue) else{
+            failure(APIException.badUrl)
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let exception = error, error != nil {
+                failure(exception)
+            }
+
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                failure(APIException.statusNotOK)
+                return
+            }
+
+            guard let data = data, !data.isEmpty else {
+                failure(APIException.decodingError)
+                return
+            }
+
+            guard let result = try? JSONDecoder().decode(StarshipModel.self, from: data) else {
+                failure(APIException.decodingError)
+                return
+            }
+
+            completion(result)
+        }.resume()
+    }
 }

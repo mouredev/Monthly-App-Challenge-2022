@@ -15,7 +15,7 @@ struct StarshipListModel {
 }
 
 extension StarshipListModel {
-    static let Empty: StarshipListModel = StarshipListModel(
+    static let NullObject: StarshipListModel = StarshipListModel(
         count: Int.zero,
         next: String.Empty,
         previous: String.Empty,

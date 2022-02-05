@@ -11,4 +11,5 @@ protocol StarshipDataSource {
     func page(url: String, completion: @escaping (StarshipListModel) -> Void, failure: @escaping (Error) -> Void)
     func search(completion: @escaping (StarshipListModel) -> Void, failure: @escaping (Error) -> Void)
     func search(value: String, completion: @escaping (StarshipListModel) -> Void, failure: @escaping (Error) -> Void)
+    func detail(url urlValue: String, completion: @escaping (StarshipModel) -> Void, failure: @escaping (Error) -> Void)
 }

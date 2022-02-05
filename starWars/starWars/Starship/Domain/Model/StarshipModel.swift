@@ -15,6 +15,7 @@ struct StarshipModel: Codable, Identifiable {
     var costInCredits: String
     var length: String
     var maxAtmospheringSpeed: String
+    var crew: String
     var passengers: String
     var cargoCapacity: String
     var consumables: String
@@ -34,6 +35,7 @@ struct StarshipModel: Codable, Identifiable {
         case costInCredits = "cost_in_credits"
         case length
         case maxAtmospheringSpeed = "max_atmosphering_speed"
+        case crew
         case passengers
         case cargoCapacity = "cargo_capacity"
         case consumables
@@ -46,4 +48,26 @@ struct StarshipModel: Codable, Identifiable {
         case edited
         case url
     }
+}
+
+extension StarshipModel {
+    static let NullObject: StarshipModel = StarshipModel.init(
+        name: String.Empty,
+        model: String.Empty,
+        manufacturer: String.Empty,
+        costInCredits: String.Empty,
+        length: String.Empty,
+        maxAtmospheringSpeed: String.Empty,
+        crew: String.Empty,
+        passengers: String.Empty,
+        cargoCapacity: String.Empty,
+        consumables: String.Empty,
+        hyperdriveRating: String.Empty,
+        MGLT: String.Empty,
+        starshipClass: String.Empty,
+        pilots: [],
+        films: [],
+        created: String.Empty,
+        edited: String.Empty,
+        url: String.Empty)
 }

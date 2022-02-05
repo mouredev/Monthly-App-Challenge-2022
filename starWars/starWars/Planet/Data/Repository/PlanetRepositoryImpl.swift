@@ -22,4 +22,8 @@ struct PlanetRepositoryImpl: PlanetRepository {
     func search(value: String, completion: @escaping (PlanetListModel) -> Void, failure: @escaping (Error) -> Void) {
         self.dataSource.search(value: value, completion: completion, failure: failure)
     }
+    
+    func detail(url: String, completion: @escaping (PlanetModel) -> Void, failure: @escaping (Error) -> Void) {
+        self.dataSource.detail(url: url, completion: completion, failure: failure)
+    }
 }

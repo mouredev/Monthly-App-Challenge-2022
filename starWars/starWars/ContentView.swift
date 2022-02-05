@@ -9,8 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            
+        NavigationView {
+            VStack {
+                NavigationLink(destination: FilmRouter.showList()) {
+                    Text("Films")
+                }
+                NavigationLink(destination: PeopleRouter.showList()) {
+                    Text("Peoples")
+                }
+                NavigationLink(destination: PlanetListView()) {
+                    Text("Planets")
+                }
+                NavigationLink(destination: SpeccyRouter.showList()) {
+                    Text("Species")
+                }
+                NavigationLink(destination: StarshipListView()) {
+                    Text("Starships")
+                }
+                NavigationLink(destination: VehicleRouter.showList()) {
+                    Text("Vehicles")
+                }
+            }
         }
     }
 }

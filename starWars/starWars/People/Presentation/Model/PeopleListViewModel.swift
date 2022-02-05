@@ -12,7 +12,7 @@ class PeopleListViewModel: ObservableObject {
     let allUseCase = AllPeopleUseCase(repository: PeopleRepositoryImpl(dataSource: PeopleAPIImpl()))
     let filterUserCase = FilterPeopleUseCase(repository: PeopleRepositoryImpl(dataSource: PeopleAPIImpl()))
     let pageUseCase = PagePeopleUseCase(repository: PeopleRepositoryImpl(dataSource: PeopleAPIImpl()))
-    @Published var peoples: PeopleListModel = PeopleListModel.Empty
+    @Published var peoples: PeopleListModel = PeopleListModel.NullObject
     @Published var errorMessage = String.Empty
     @Published var hasError = false
     
@@ -55,7 +55,7 @@ class PeopleListViewModel: ObservableObject {
         case .success(let peoples):
             self.peoples = peoples
         case .failure(let error):
-            self.peoples = PeopleListModel.Empty
+            self.peoples = PeopleListModel.NullObject
             self.errorMessage = error.localizedDescription
             self.hasError = true
         }

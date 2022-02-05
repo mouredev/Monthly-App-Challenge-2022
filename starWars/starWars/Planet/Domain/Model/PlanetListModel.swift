@@ -15,7 +15,7 @@ struct PlanetListModel {
 }
 
 extension PlanetListModel {
-    static let Empty: PlanetListModel = PlanetListModel(
+    static let NullObject: PlanetListModel = PlanetListModel(
         count: Int.zero,
         next: String.Empty,
         previous: String.Empty,

@@ -11,6 +11,7 @@ struct PeopleModel: Codable, Identifiable {
     private(set) var id = UUID()
     var name: String
     var height: String
+    var mass: String
     var hairColor: String
     var skinColor: String
     var eyeColor: String
@@ -28,6 +29,7 @@ struct PeopleModel: Codable, Identifiable {
     private enum CodingKeys : String, CodingKey {
         case name
         case height
+        case mass
         case hairColor = "hair_color"
         case skinColor = "skin_color"
         case eyeColor = "eye_color"
@@ -42,4 +44,24 @@ struct PeopleModel: Codable, Identifiable {
         case edited
         case url
     }
+}
+
+extension PeopleModel {
+    static let NullObject: PeopleModel = PeopleModel.init(
+        name: String.Empty,
+        height: String.Empty,
+        mass: String.Empty,
+        hairColor: String.Empty,
+        skinColor: String.Empty,
+        eyeColor: String.Empty,
+        birthYear: String.Empty,
+        gender: String.Empty,
+        homeworld: String.Empty,
+        films: [],
+        species: [],
+        vehicles: [],
+        starships: [],
+        created: String.Empty,
+        edited: String.Empty,
+        url: String.Empty)
 }
