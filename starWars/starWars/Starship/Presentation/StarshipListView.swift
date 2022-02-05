@@ -11,8 +11,31 @@ struct StarshipListView: View {
     
     @StateObject var model = StarshipListViewModel()
     
+    fileprivate func row(_ people: StarshipModel) -> some View {
+        HStack{
+            Text("\(people.name)")
+        }
+    }
+    
+    fileprivate func list() -> some View {
+        List {
+            ForEach(model.starships.results){ item in
+                row(item)
+            }
+        }
+        .background(Color(.clear))
+        .navigationTitle("Starships")
+        .task {
+            model.all()
+        }
+        .alert("Error", isPresented: $model.hasError) {
+        } message: {
+            Text(model.errorMessage)
+        }
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        list()
     }
 }
 

@@ -19,14 +19,53 @@ class PeopleListViewModel: ObservableObject {
     func all() {
         self.errorMessage = String.Empty
         allUseCase.execute {
-            switch $0 {
-            case .success(let result):
-                self.peoples = result
-            case .failure(let error):
-                self.peoples = PeopleListModel.Empty
-                self.errorMessage = error.localizedDescription
-                self.hasError = true
-            }
+            self.response($0)
         }
+    }
+    
+    func filter(value: String) {
+        self.errorMessage = String.Empty
+        filterUserCase.execute(value: value) {
+            self.response($0)
+        }
+    }
+    
+    func next() {
+        self.errorMessage = String.Empty
+        if self.containNextPage() {
+            self.page(url: self.peoples.next)
+        }
+    }
+    
+    func previous() {
+        self.errorMessage = String.Empty
+        if self.containPreviousPage() {
+            self.page(url: self.peoples.previous)
+        }
+    }
+    
+    private func page(url: String) {
+        self.pageUseCase.execute(url: url) {
+            self.response($0)
+        }
+    }
+    
+    private func response(_ result: Result<PeopleListModel, UseCaseException>) {
+        switch result {
+        case .success(let peoples):
+            self.peoples = peoples
+        case .failure(let error):
+            self.peoples = PeopleListModel.Empty
+            self.errorMessage = error.localizedDescription
+            self.hasError = true
+        }
+    }
+    
+    func containNextPage() -> Bool {
+        !self.peoples.next.isEmpty
+    }
+    
+    func containPreviousPage() -> Bool {
+        !self.peoples.previous.isEmpty
     }
 }
