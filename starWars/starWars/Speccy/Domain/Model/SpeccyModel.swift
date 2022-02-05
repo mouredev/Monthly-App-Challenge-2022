@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct SpeccyModel: Codable, Identifiable {
+struct SpeccyModel: Identifiable {
+
     private(set) var id = UUID()
     var name: String
     var classification: String
@@ -17,30 +18,30 @@ struct SpeccyModel: Codable, Identifiable {
     var hairColors: String
     var eyeColors: String
     var averageLifespan: String
-    var homeworld: String?
+    var homeworld: String
     var language: String
     var people: [String]
     var films: [String]
-    var created: String
-    var edited: String
     var url: String
 
-    private enum CodingKeys : String, CodingKey {
-        case name
-        case classification
-        case designation
-        case averageHeight = "average_height"
-        case skinColors = "skin_colors"
-        case hairColors = "hair_colors"
-        case eyeColors = "eye_colors"
-        case averageLifespan = "average_lifespan"
-        case homeworld
-        case language
-        case people
-        case films
-        case created
-        case edited
-        case url
+    init(entity: SpeccyAPIEntity) {
+        self.init(name: entity.name, classification: entity.classification, designation: entity.designation, averageHeight: entity.averageHeight, skinColors: entity.skinColors, hairColors: entity.hairColors, eyeColors: entity.eyeColors, averageLifespan: entity.averageLifespan, homeworld: entity.homeworld ?? String.Empty, language: entity.language, people: entity.people, films: entity.films, url: entity.url)
+    }
+
+    internal init(name: String, classification: String, designation: String, averageHeight: String, skinColors: String, hairColors: String, eyeColors: String, averageLifespan: String, homeworld: String, language: String, people: [String], films: [String], url: String) {
+        self.name = name
+        self.classification = classification
+        self.designation = designation
+        self.averageHeight = averageHeight
+        self.skinColors = skinColors
+        self.hairColors = hairColors
+        self.eyeColors = eyeColors
+        self.averageLifespan = averageLifespan
+        self.homeworld = homeworld
+        self.language = language
+        self.people = people
+        self.films = films
+        self.url = url
     }
 }
 
@@ -58,7 +59,5 @@ extension SpeccyModel {
         language: String.Empty,
         people: [],
         films: [],
-        created: String.Empty,
-        edited: String.Empty,
         url: String.Empty)
 }

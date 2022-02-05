@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct VehicleModel: Codable, Identifiable {
+struct VehicleModel: Identifiable {
+
     private(set) var id = UUID()
     var name: String
     var model: String
@@ -22,27 +23,27 @@ struct VehicleModel: Codable, Identifiable {
     var vehicleClass: String
     var pilots: [String]
     var films: [String]
-    var created: String
-    var edited: String
     var url: String
-    
-    private enum CodingKeys : String, CodingKey {
-        case name
-        case model
-        case manufacturer
-        case costInCredits = "cost_in_credits"
-        case length
-        case maxAtmospheringSpeed = "max_atmosphering_speed"
-        case crew
-        case passengers
-        case cargoCapacity = "cargo_capacity"
-        case consumables
-        case vehicleClass = "vehicle_class"
-        case pilots
-        case films
-        case created
-        case edited
-        case url
+
+    init(entity: VehicleAPIEntity) {
+        self.init(name: entity.name, model: entity.model, manufacturer: entity.manufacturer, costInCredits: entity.costInCredits, length: entity.length, maxAtmospheringSpeed: entity.maxAtmospheringSpeed, crew: entity.crew, passengers: entity.passengers, cargoCapacity: entity.cargoCapacity, consumables: entity.consumables, vehicleClass: entity.vehicleClass, pilots: entity.pilots, films: entity.films, url: entity.url)
+    }
+
+    internal init(name: String, model: String, manufacturer: String, costInCredits: String, length: String, maxAtmospheringSpeed: String, crew: String, passengers: String, cargoCapacity: String, consumables: String, vehicleClass: String, pilots: [String], films: [String], url: String) {
+        self.name = name
+        self.model = model
+        self.manufacturer = manufacturer
+        self.costInCredits = costInCredits
+        self.length = length
+        self.maxAtmospheringSpeed = maxAtmospheringSpeed
+        self.crew = crew
+        self.passengers = passengers
+        self.cargoCapacity = cargoCapacity
+        self.consumables = consumables
+        self.vehicleClass = vehicleClass
+        self.pilots = pilots
+        self.films = films
+        self.url = url
     }
 }
 
@@ -61,7 +62,5 @@ extension VehicleModel {
         vehicleClass: String.Empty,
         pilots: [],
         films: [],
-        created: String.Empty,
-        edited: String.Empty,
         url: String.Empty)
 }

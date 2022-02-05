@@ -11,5 +11,5 @@ struct VehicleListAPIEntity: Codable {
     var count: Int
     var next: String?
     var previous: String?
-    var results: [VehicleModel]
+    var results: [VehicleAPIEntity]
 }

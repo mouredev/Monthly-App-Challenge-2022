@@ -12,6 +12,20 @@ struct PlanetListModel {
     var next: String
     var previous: String
     var results: [PlanetModel]
+    
+    init(entity: PlanetListAPIEntity) {
+        self.init(count: entity.count, next: entity.next ?? String.Empty, previous: entity.previous ?? String.Empty, results: [])
+        entity.results.forEach {
+            self.results.append(PlanetModel(entity: $0))
+        }
+    }
+
+    internal init(count: Int, next: String, previous: String, results: [PlanetModel]) {
+        self.count = count
+        self.next = next
+        self.previous = previous
+        self.results = results
+    }
 }
 
 extension PlanetListModel {

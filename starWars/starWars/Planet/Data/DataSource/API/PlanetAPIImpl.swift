@@ -51,12 +51,7 @@ struct PlanetAPIImpl: PlanetDataSource {
                 return
             }
             
-            completion(PlanetListModel (
-                count: result.count,
-                next: result.next ?? String.Empty,
-                previous: result.previous ?? String.Empty,
-                results: result.results
-            ))
+            completion(PlanetListModel(entity: result))
         }.resume()
     }
     
@@ -82,12 +77,12 @@ struct PlanetAPIImpl: PlanetDataSource {
                 return
             }
 
-            guard let result = try? JSONDecoder().decode(PlanetModel.self, from: data) else {
+            guard let result = try? JSONDecoder().decode(PlanetAPIEntity.self, from: data) else {
                 failure(APIException.decodingError)
                 return
             }
 
-            completion(result)
+            completion(PlanetModel(entity: result))
         }.resume()
     }
 }

@@ -51,12 +51,7 @@ struct StarshipAPIImpl: StarshipDataSource {
                 return
             }
             
-            completion(StarshipListModel (
-                count: result.count,
-                next: result.next ?? String.Empty,
-                previous: result.previous ?? String.Empty,
-                results: result.results
-            ))
+            completion(StarshipListModel(entity: result))
         }.resume()
     }
 
@@ -82,12 +77,12 @@ struct StarshipAPIImpl: StarshipDataSource {
                 return
             }
 
-            guard let result = try? JSONDecoder().decode(StarshipModel.self, from: data) else {
+            guard let result = try? JSONDecoder().decode(StarshipAPIEntity.self, from: data) else {
                 failure(APIException.decodingError)
                 return
             }
 
-            completion(result)
+            completion(StarshipModel(entity: result))
         }.resume()
     }
 }

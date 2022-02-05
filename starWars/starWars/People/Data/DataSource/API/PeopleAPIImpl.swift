@@ -50,12 +50,7 @@ struct PeopleAPIImpl: PeopleDataSource {
                 return
             }
 
-            completion(PeopleListModel (
-                count: result.count,
-                next: result.next ?? String.Empty,
-                previous: result.previous ?? String.Empty,
-                results: result.results
-            ))
+            completion(PeopleListModel (entity: result))
         }.resume()
     }
 
@@ -81,12 +76,12 @@ struct PeopleAPIImpl: PeopleDataSource {
                 return
             }
 
-            guard let result = try? JSONDecoder().decode(PeopleModel.self, from: data) else {
+            guard let result = try? JSONDecoder().decode(PeopleAPIEntity.self, from: data) else {
                 failure(APIException.decodingError)
                 return
             }
 
-            completion(result)
+            completion(PeopleModel(entity: result))
         }.resume()
     }
 }

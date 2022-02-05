@@ -51,12 +51,7 @@ struct VehicleAPIImpl: VehicleDataSource {
                 return
             }
             
-            completion(VehicleListModel (
-                count: result.count,
-                next: result.next ?? String.Empty,
-                previous: result.previous ?? String.Empty,
-                results: result.results
-            ))
+            completion(VehicleListModel(entity: result))
         }.resume()
     }
 
@@ -82,12 +77,12 @@ struct VehicleAPIImpl: VehicleDataSource {
                 return
             }
 
-            guard let result = try? JSONDecoder().decode(VehicleModel.self, from: data) else {
+            guard let result = try? JSONDecoder().decode(VehicleAPIEntity.self, from: data) else {
                 failure(APIException.decodingError)
                 return
             }
 
-            completion(result)
+            completion(VehicleModel(entity: result))
         }.resume()
     }
 }

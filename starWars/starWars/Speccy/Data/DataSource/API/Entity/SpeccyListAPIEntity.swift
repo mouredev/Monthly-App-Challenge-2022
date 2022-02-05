@@ -11,5 +11,5 @@ struct SpeccyListAPIEntity: Codable {
     var count: Int
     var next: String?
     var previous: String?
-    var results: [SpeccyModel]
+    var results: [SpeccyAPIEntity]
 }

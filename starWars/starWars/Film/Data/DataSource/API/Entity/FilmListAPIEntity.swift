@@ -11,5 +11,5 @@ struct FilmListAPIEntity: Codable {
     var count: Int
     var next: String?
     var previous: String?
-    var results: [FilmModel]
+    var results: [FilmAPIEntity]
 }

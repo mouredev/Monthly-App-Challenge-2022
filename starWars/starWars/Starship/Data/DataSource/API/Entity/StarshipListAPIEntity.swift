@@ -11,5 +11,5 @@ struct StarshipListAPIEntity: Codable {
     var count: Int
     var next: String?
     var previous: String?
-    var results: [StarshipModel]
+    var results: [StarshipAPIEntity]
 }

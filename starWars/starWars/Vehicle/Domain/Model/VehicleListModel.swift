@@ -12,6 +12,20 @@ struct VehicleListModel {
     var next: String
     var previous: String
     var results: [VehicleModel]
+
+    init(entity: VehicleListAPIEntity) {
+        self.init(count: entity.count, next: entity.next ?? String.Empty, previous: entity.previous ?? String.Empty, results: [])
+        entity.results.forEach {
+            self.results.append(VehicleModel(entity: $0))
+        }
+    }
+
+    internal init(count: Int, next: String, previous: String, results: [VehicleModel]) {
+        self.count = count
+        self.next = next
+        self.previous = previous
+        self.results = results
+    }
 }
 
 extension VehicleListModel {

@@ -45,22 +45,13 @@ struct SpeccyAPIImpl: SpeccyDataSource {
                 failure(APIException.decodingError)
                 return
             }
-            do {
-                let result2 = try JSONDecoder().decode(SpeccyListAPIEntity.self, from: data)
-            } catch {
-                print(error)
-            }
+            
             guard let result = try? JSONDecoder().decode(SpeccyListAPIEntity.self, from: data) else {
                 failure(APIException.decodingError)
                 return
             }
             
-            completion(SpeccyListModel (
-                count: result.count,
-                next: result.next ?? String.Empty,
-                previous: result.previous ?? String.Empty,
-                results: result.results
-            ))
+            completion(SpeccyListModel(entity: result))
         }.resume()
     }
 
@@ -86,12 +77,12 @@ struct SpeccyAPIImpl: SpeccyDataSource {
                 return
             }
 
-            guard let result = try? JSONDecoder().decode(SpeccyModel.self, from: data) else {
+            guard let result = try? JSONDecoder().decode(SpeccyAPIEntity.self, from: data) else {
                 failure(APIException.decodingError)
                 return
             }
 
-            completion(result)
+            completion(SpeccyModel(entity: result))
         }.resume()
     }
 }

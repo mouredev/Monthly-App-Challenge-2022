@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PeopleModel: Codable, Identifiable {
+struct PeopleModel: Identifiable {
     private(set) var id = UUID()
     var name: String
     var height: String
@@ -22,27 +22,27 @@ struct PeopleModel: Codable, Identifiable {
     var species: [String]
     var vehicles: [String]
     var starships: [String]
-    var created: String
-    var edited: String
     var url: String
     
-    private enum CodingKeys : String, CodingKey {
-        case name
-        case height
-        case mass
-        case hairColor = "hair_color"
-        case skinColor = "skin_color"
-        case eyeColor = "eye_color"
-        case birthYear = "birth_year"
-        case gender
-        case homeworld
-        case films
-        case species
-        case vehicles
-        case created
-        case starships
-        case edited
-        case url
+    init(entity: PeopleAPIEntity){
+        self.init(name: entity.name, height: entity.height, mass: entity.mass, hairColor: entity.hairColor, skinColor: entity.skinColor, eyeColor: entity.eyeColor, birthYear: entity.birthYear, gender: entity.gender, homeworld: entity.homeworld, films: entity.films, species: entity.species, vehicles: entity.vehicles, starships: entity.starships, url: entity.url)
+    }
+    
+    internal init(name: String, height: String, mass: String, hairColor: String, skinColor: String, eyeColor: String, birthYear: String, gender: String, homeworld: String, films: [String], species: [String], vehicles: [String], starships: [String], url: String) {
+        self.name = name
+        self.height = height
+        self.mass = mass
+        self.hairColor = hairColor
+        self.skinColor = skinColor
+        self.eyeColor = eyeColor
+        self.birthYear = birthYear
+        self.gender = gender
+        self.homeworld = homeworld
+        self.films = films
+        self.species = species
+        self.vehicles = vehicles
+        self.starships = starships
+        self.url = url
     }
 }
 
@@ -61,7 +61,5 @@ extension PeopleModel {
         species: [],
         vehicles: [],
         starships: [],
-        created: String.Empty,
-        edited: String.Empty,
         url: String.Empty)
 }

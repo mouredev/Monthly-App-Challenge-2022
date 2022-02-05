@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PlanetModel: Codable, Identifiable {
+struct PlanetModel: Identifiable {
     private(set) var id = UUID()
     var name: String
     var rotationPeriod: String
@@ -20,25 +20,25 @@ struct PlanetModel: Codable, Identifiable {
     var population: String
     var residents: [String]
     var films: [String]
-    var created: String
-    var edited: String
     var url: String
     
-    private enum CodingKeys : String, CodingKey {
-        case name
-        case rotationPeriod = "rotation_period"
-        case orbitalPeriod = "orbital_period"
-        case diameter
-        case climate
-        case gravity
-        case terrain
-        case surfaceWater = "surface_water"
-        case population
-        case residents
-        case films
-        case created
-        case edited
-        case url
+    init(entity: PlanetAPIEntity) {
+        self.init(name: entity.name, rotationPeriod: entity.rotationPeriod, orbitalPeriod: entity.orbitalPeriod, diameter: entity.diameter, climate: entity.climate, gravity: entity.gravity, terrain: entity.terrain, surfaceWater: entity.surfaceWater, population: entity.population, residents: entity.residents, films: entity.films, url: entity.url)
+    }
+
+    internal init(name: String, rotationPeriod: String, orbitalPeriod: String, diameter: String, climate: String, gravity: String, terrain: String, surfaceWater: String, population: String, residents: [String], films: [String], url: String) {
+        self.name = name
+        self.rotationPeriod = rotationPeriod
+        self.orbitalPeriod = orbitalPeriod
+        self.diameter = diameter
+        self.climate = climate
+        self.gravity = gravity
+        self.terrain = terrain
+        self.surfaceWater = surfaceWater
+        self.population = population
+        self.residents = residents
+        self.films = films
+        self.url = url
     }
 }
 
@@ -55,7 +55,5 @@ extension PlanetModel {
         population: String.Empty,
         residents: [],
         films: [],
-        created: String.Empty,
-        edited: String.Empty,
         url: String.Empty)
 }
