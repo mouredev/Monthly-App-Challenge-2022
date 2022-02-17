@@ -40,40 +40,40 @@ class Characters {
 
 class Result {
   Result({
-    required this.name,
-    required this.height,
-    required this.mass,
-    required this.hairColor,
-    required this.skinColor,
-    required this.eyeColor,
-    required this.birthYear,
-    // required this.gender,
-    required this.homeworld,
+    this.name,
+    this.height,
+    this.mass,
+    this.hairColor,
+    this.skinColor,
+    this.eyeColor,
+    this.birthYear,
+    this.gender,
+    this.homeworld,
     required this.films,
     required this.species,
     required this.vehicles,
     required this.starships,
     required this.created,
     required this.edited,
-    required this.url,
+    this.url,
   });
 
-  String name;
-  String height;
-  String mass;
-  String hairColor;
-  String skinColor;
-  String eyeColor;
-  String birthYear;
-  // Gender gender;
-  String homeworld;
+  String? name;
+  String? height;
+  String? mass;
+  String? hairColor;
+  String? skinColor;
+  String? eyeColor;
+  String? birthYear;
+  String? gender;
+  String? homeworld;
   List<String> films;
   List<String> species;
   List<String> vehicles;
   List<String> starships;
   DateTime created;
   DateTime edited;
-  String url;
+  String? url;
 
   factory Result.fromJson(Map<String, dynamic> json) => Result(
         name: json["name"],
@@ -83,7 +83,7 @@ class Result {
         skinColor: json["skin_color"],
         eyeColor: json["eye_color"],
         birthYear: json["birth_year"],
-        // gender: genderValues.map[json["gender"]]!,
+        gender: json["gender"],
         homeworld: json["homeworld"],
         films: List<String>.from(json["films"].map((x) => x)),
         species: List<String>.from(json["species"].map((x) => x)),

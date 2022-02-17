@@ -4,5 +4,6 @@ import 'package:flutter/cupertino.dart';
 
 final Map<String, Widget Function(BuildContext)> appRoutes = {
   'home': (_) => HomePage(),
+  // ignore: prefer_const_constructors
   'details': (_) => DetailsPage()
 };
