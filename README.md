@@ -23,9 +23,9 @@ Requisitos:
 
 ## links de las apk en funcionamiento
 
-- App Arm64V8 : [https://mega.nz/file/shcnwKaT#J6Ovdkf4ozyI-upOF_CP5xCrLyXHG2Xdi5ueGNdx_r8]
-- App Armbiv7 : [https://mega.nz/file/E0twkaLC#gZUmVh1yyxw0trYmIQwP39nz_Djhr20sdm9TqCSlaGY]
--  App x86_64 : [https://mega.nz/file/kokQiAKb#sSIVnQh2tVhFDX3sjgliTZ7LJA_SPwvNn0s4JcQedGw]
+- App Arm64V8 : [https://mega.nz/file/tscQwJIK#rVLXcIyWweXfS9FgvwvoB3Bi05ThJlmEwMBl38M4JGY]
+- App Armbiv7 : [https://mega.nz/file/QlN0zRQI#72rWLlhzk6IIiIYg5P1niFKtGgJw1fxRrkpD7sEohr4]
+- App x86_64 : [https://mega.nz/file/wwUwQDQY#PZ9agjIc2dS-UqIjzkJ5hm2d6mmf7bcYtm7KKgRH5tg]
 
 
 ## Acerca de los retos:
