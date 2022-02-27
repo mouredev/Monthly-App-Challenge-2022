@@ -12,14 +12,14 @@ String charactersToJson(Characters data) => json.encode(data.toJson());
 class Characters {
   Characters({
     required this.count,
-    required this.next,
-    required this.previous,
+    this.next,
+    this.previous,
     required this.results,
   });
 
   int count;
-  String next;
-  dynamic previous;
+  String? next;
+  dynamic? previous;
   List<Result> results;
 
   factory Characters.fromJson(Map<String, dynamic> json) => Characters(
@@ -40,6 +40,7 @@ class Characters {
 
 class Result {
   Result({
+    this.id,
     this.name,
     this.height,
     this.mass,
@@ -57,7 +58,7 @@ class Result {
     required this.edited,
     this.url,
   });
-
+  String? id;
   String? name;
   String? height;
   String? mass;
@@ -76,6 +77,7 @@ class Result {
   String? url;
 
   factory Result.fromJson(Map<String, dynamic> json) => Result(
+        id: json["id"],
         name: json["name"],
         height: json["height"],
         mass: json["mass"],
@@ -95,6 +97,7 @@ class Result {
       );
 
   Map<String, dynamic> toJson() => {
+        "id": id,
         "name": name,
         "height": height,
         "mass": mass,
