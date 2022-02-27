@@ -33,11 +33,9 @@ class _HomePageState extends State<HomePage> {
         setState(() {
           if (page <= 9) {
             page++;
-            print('ter23  ${page}');
           }
 
           // mockNewData(page);
-          print('ter  ${page}');
         });
       }
     });
@@ -324,14 +322,3 @@ Widget listOfCharacters(
     ),
   );
 }
-
-// mockNewData(int page) async {
-//   // print('primara ${nextUrl}');
-//   var next = await homeServices
-//       .getNextCharacter('https://swapi.dev/api/people/?page=$page');
-//   // nextCharacter = next;
-//   character.next = next.next;
-//   // print('segunda ${nextUrl}');
-//   characters.addAll(next.results);
-//   nextCharacters = characters;
-// }

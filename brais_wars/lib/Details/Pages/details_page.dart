@@ -28,67 +28,62 @@ class DetailsPage extends StatelessWidget {
           elevation: 0,
           backgroundColor: Colors.black87,
         ),
-        body: Container(
-          height: MediaQuery.of(context).size.height,
-          // height: 100,
-          child: SizedBox(
-            child: Column(
-              children: [
-                Container(
-                  decoration: const BoxDecoration(color: Colors.black87),
-                  width: double.infinity,
-                  height: 225,
-                  child: Center(
-                    child: Column(children: [
-                      CircleAvatar(
-                        radius: 90,
-                        backgroundColor: const Color(0xbbFB0202),
-                        child: CircleAvatar(
-                          backgroundImage: AssetImage(
-                            'assets/characters/${imageName}.jpg',
-                          ),
-                          radius: 85.0,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                decoration: const BoxDecoration(color: Colors.black87),
+                width: double.infinity,
+                height: 225,
+                child: Center(
+                  child: Column(children: [
+                    CircleAvatar(
+                      radius: 90,
+                      backgroundColor: const Color(0xbbFB0202),
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage(
+                          'assets/characters/${imageName}.jpg',
                         ),
+                        radius: 85.0,
                       ),
-                      const SizedBox(
-                        height: 10.0,
-                      ),
-                      Text(
-                        character.name!,
-                        style:
-                            const TextStyle(color: Colors.white, fontSize: 22),
-                      )
-                    ]),
-                  ),
-                ),
-                Container(
-                  height: 50,
-                  decoration: const BoxDecoration(color: Colors.black54),
-                  child: const Padding(
-                    padding: EdgeInsets.all(7.0),
-                    child: TabBar(indicatorColor: Color(0xbbFB0202), tabs: [
-                      Tab(
-                        text: 'Info',
-                      ),
-                      Tab(
-                        text: 'Películas',
-                      ),
-                      Tab(
-                        text: 'Vehículos',
-                      )
-                    ]),
-                  ),
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * .5,
-                  child: TabBarView(children: [
-                    infoCharacter(context, character),
-                    infoFilms(films, character.films),
-                    infoVehicles(vehicles, character.vehicles),
+                    ),
+                    const SizedBox(
+                      height: 10.0,
+                    ),
+                    Text(
+                      character.name!,
+                      style: const TextStyle(color: Colors.white, fontSize: 22),
+                    )
                   ]),
-                )
-              ],
-            ),
+                ),
+              ),
+              Container(
+                height: 50,
+                decoration: const BoxDecoration(color: Colors.black54),
+                child: const Padding(
+                  padding: EdgeInsets.all(7.0),
+                  child: TabBar(indicatorColor: Color(0xbbFB0202), tabs: [
+                    Tab(
+                      text: 'Info',
+                    ),
+                    Tab(
+                      text: 'Películas',
+                    ),
+                    Tab(
+                      text: 'Vehículos',
+                    )
+                  ]),
+                ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * .5,
+                child: TabBarView(children: [
+                  infoCharacter(context, character),
+                  infoFilms(films, character.films),
+                  infoVehicles(vehicles, character.vehicles),
+                ]),
+              )
+            ],
           ),
         ),
       )),

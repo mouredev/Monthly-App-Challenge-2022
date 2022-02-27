@@ -6,6 +6,7 @@ class SearchPeople extends SearchDelegate {
   @override
   // TODO: implement searchFieldLabel
   String? get searchFieldLabel => 'Buscar personaje';
+
   var _homeServices = new HomeServices();
   late starWarsCharacters.Characters character;
   late List<starWarsCharacters.Result> characters = [];

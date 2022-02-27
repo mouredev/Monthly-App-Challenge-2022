@@ -1,8 +1,6 @@
 import 'package:brais_wars/Home/pages/home_page.dart';
-import 'package:brais_wars/config/config.dart';
 import 'package:brais_wars/shared/models/character.models.dart';
 import 'package:brais_wars/shared/models/characters.models.dart';
-import 'package:brais_wars/shared/models/films.models.dart';
 import 'package:brais_wars/shared/models/films.models.dart';
 import 'package:brais_wars/shared/models/vehicles.models.dart';
 import 'package:http/http.dart' as http;
