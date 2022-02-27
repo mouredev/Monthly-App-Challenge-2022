@@ -6,19 +6,20 @@
 
 
 
-Esta my solucion al reto del mes de frebreo de los retos de Mouredev realizado un app flutter donde se debe consumir el api de star wars.
+Esta my solucion al reto del mes de frebreo de los retos de Mouredev realizado un app flutter donde se debe consumir el api de star wars. use colores de los sith para el app y la llame Brais Wars.
 
+Para la paginacion del listado use un infinity scrol, para el manejo de las imagenes encontre un sitio donde las encontre (https://starwars-visualguide.com/#/).
 
 Requisitos:
 
-* Usa el API [https://swapi.dev/](https://swapi.dev/)
-* El diseño es de libre elección.
-* Debe mostrar un listado y un detalle de cada personaje.
-* El listado tendrá que estar paginado.
-* El listado poseerá un filtro de búsqueda.
-* Al seleccionar un personaje del listado, el detalle mostrará los datos que consideres oportunos.
-* OPCIONAL: Detalle de películas, vehículos, naves, especies...
-* OPCIONAL: Foto de cada personaje.
+* Usa el API [https://swapi.dev/](https://swapi.dev/) ✔️
+* El diseño es de libre elección.✔️
+* Debe mostrar un listado y un detalle de cada personaje.✔️
+* El listado tendrá que estar paginado.✔️
+* El listado poseerá un filtro de búsqueda.✔️
+* Al seleccionar un personaje del listado, el detalle mostrará los datos que consideres oportunos.✔️
+* OPCIONAL: Detalle de películas, vehículos, naves, especies...✔️
+* OPCIONAL: Foto de cada personaje.✔️
 
 
 ## links de las apk en funcionamiento
