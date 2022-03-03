@@ -21,8 +21,6 @@ Requisitos:
 * OPCIONAL: Detalle de películas, vehículos, naves, especies...✔️
 * OPCIONAL: Foto de cada personaje.✔️
 
-[![Video del app](https://mega.nz/file/ZpFShLqB#Pl-CjDBhLAfe3e3TqH8zAAYs-f63XozZDZtSfrhjmh4)]
-
 ## links de las apk en funcionamiento
 
 - App Arm64V8 : [https://mega.nz/file/tscQwJIK#rVLXcIyWweXfS9FgvwvoB3Bi05ThJlmEwMBl38M4JGY]
