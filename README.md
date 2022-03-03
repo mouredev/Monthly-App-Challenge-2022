@@ -21,17 +21,22 @@ Requisitos:
 * OPCIONAL: Detalle de películas, vehículos, naves, especies...✔️
 * OPCIONAL: Foto de cada personaje.✔️
 
+[![Video del app](https://mega.nz/file/ZpFShLqB#Pl-CjDBhLAfe3e3TqH8zAAYs-f63XozZDZtSfrhjmh4)]
 
 ## links de las apk en funcionamiento
 
 - App Arm64V8 : [https://mega.nz/file/tscQwJIK#rVLXcIyWweXfS9FgvwvoB3Bi05ThJlmEwMBl38M4JGY]
 - App Armbiv7 : [https://mega.nz/file/QlN0zRQI#72rWLlhzk6IIiIYg5P1niFKtGgJw1fxRrkpD7sEohr4]
 - App x86_64 : [https://mega.nz/file/wwUwQDQY#PZ9agjIc2dS-UqIjzkJ5hm2d6mmf7bcYtm7KKgRH5tg]
+- 
+
 
 
 ## Acerca de los retos:
 
 Mejora tus habilidades en programación con los retos de código que te propone mouredev cada semana y mes. Quieres saber mas a fondo sobre estos retos mira este video : [https://www.youtube.com/watch?v=14v4IINunvY&t=4s[
+
+
 
 
 - Redes de Mouredev
@@ -40,6 +45,9 @@ Mejora tus habilidades en programación con los retos de código que te propone 
 - 📷 Instagram | https://instagram.com/mouredev
 - 🖥 GitHub | https://github.com/mouredev
 
+## Demo
+
+https://user-images.githubusercontent.com/20806101/156616363-b4a3d0ef-34b8-4181-8be1-1db1b67e4fed.mp4
 
 
 ## License
