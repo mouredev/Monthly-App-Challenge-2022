@@ -8,11 +8,15 @@ También existen repositorios tanto para Kotlin/Android como para Swift/iOS en l
 [![GitHub Followers](https://img.shields.io/github/stars/mouredev/Weekly-Challenge-2022-Kotlin?label=Repositorio%20público%20retos%20Kotlin/Android&style=social)](https://github.com/mouredev/Weekly-Challenge-2022-Kotlin)
 [![GitHub Followers](https://img.shields.io/github/stars/mouredev/Weekly-Challenge-2022-Swift?label=Repositorio%20público%20retos%20Swift/iOS&style=social)](https://github.com/mouredev/Weekly-Challenge-2022-Swift)
 
+## Vídeo explicación retos
+
+<a href="https://youtu.be/14v4IINunvY"><img src="http://i3.ytimg.com/vi/14v4IINunvY/maxresdefault.jpg" style="height: 50%; width:50%;"/></a>
+
 ### El proyecto
 La idea principal es utilizar este proyecto para publicar retos de creación de pequeñas Apps y soluciones en diferentes tecnologías (principalmente iOS y Android, aunque si quieres puedes hacerlo via web/desktop). Es una manera para intentar "forzarnos" a practicar desarrollo de aplicaciones en base a requisitos y de forma colaborativa dentro de la comunidad.
 
 ## Listado de retos
-### Enero (03/01/22 - 31/01/22)
+### Enero: 03/01/22
 **CONECTA 4:** Crea el juego conecta cuatro. Tienes un ejemplo parecido [aquí](https://solitariosonline.es/conecta-4). 
 
 Requisitos:
@@ -25,7 +29,44 @@ Requisitos:
 * Dos botones para reiniciar la partida en marcha y para resetear el contador de victorias y derrotas.
 * Puedes añadirle todas las funcionalidades extra que consideres.
 
-### Febrero (31/01/22 - 28/02/22)
+Soluciones: [**ENLACES A LOS REPOSITORIOS**](./SolucionesReto01.md)
+
+### Febrero: 03/02/22
+**LA ENCICLOPEDIA STAR WARS:** Crea una app que sirva para listar los personajes de Star Wars y que te permita buscarlos por nombre.
+
+Requisitos:
+
+* Usa el API [https://swapi.dev/](https://swapi.dev/)
+* El diseño es de libre elección.
+* Debe mostrar un listado y un detalle de cada personaje.
+* El listado tendrá que estar paginado.
+* El listado poseerá un filtro de búsqueda.
+* Al seleccionar un personaje del listado, el detalle mostrará los datos que consideres oportunos.
+* OPCIONAL: Detalle de películas, vehículos, naves, especies...
+* OPCIONAL: Foto de cada personaje.
+
+Soluciones: [**ENLACES A LOS REPOSITORIOS**](./SolucionesReto02.md)
+
+### Marzo: 03/03/22
+**CUESTIONARIO CONTRARRELOJ:** Crea una "Quiz app" contrareloj con ranking. 
+
+Requisitos:
+
+* El diseño es de libre elección.
+* La temática de las preguntas del cuestionario será de libre elección. Puede estar bien seguir un mismo tema (por ejemplo, preguntas sobre el universo "Harry Potter").
+* En la pantalla inicial podrás comenzar a jugar o consultar el ranking de puntuaciones.
+* El juego consistirá en 10 preguntas aleatorias con 3 respuestas y sólo una correcta. Recomendable crear más de 10 preguntas para que no siempre salgan las mismas. Cada vez que se responde a una pregunta, se pasará a la siguiente.
+* Disponemos de 30 segundos para responder cada pregunta. El contador deberá aparecer en la pantalla, y si llega a 0 se tomará como respuesta incorrecta y se pasará a la siguiente pregunta.
+* Al marcar una respuesta o finalizar el tiempo, se mostrará si se ha acertado o no la pregunta, dando feedback sobre cuál sería la respuesta correcta y navegando al cabo de un par de segundos a la siguiente pantalla.
+* Sistema de puntuación:
+	* Contador a 0 o respuesta incorrecta = 0 puntos.
+	* Contador mayor 0 y respuesta correcta = [segundos restantes] puntos. Ej: Si quedaban 9 segundos para finalizar la cuenta atrás y se acierta la pregunta, se asignan 9 puntos.
+* Una vez finalizada la pregunta número 10 se mostrará en una nueva pantalla la puntuación final y se deberá introducir un nombre para guardarla de forma persistente (aunque cerremos la app). Hecho estos se mostrará la pantalla de ranking.
+* La pantalla de ranking muestra ordenados de mayor a menor los 10 mejores resultados y el nombre guardado. Desde esta pantalla siempre se podrá navegar a la pantalla inicial.
+
+Reto en desarrollo...
+
+### Abril: 31/03/22
 Pendiente de publicación...
 
 ### ¿Cómo puedo participar?
