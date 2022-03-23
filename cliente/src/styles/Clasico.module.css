@@ -1,0 +1,141 @@
+.contenedorclasico
+{
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blanco);
+}
+
+.header
+{
+    background-color: var(--blanco);
+    box-shadow: 0px 12px 12px rgb(0 0 0 / .5);
+    padding: 2rem;
+}
+
+.header__contenedorpregunta
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fuenteSecundaria);
+    font-weight: var(--medium);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .header__contenedorpregunta
+    {
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
+
+.header__contadorpregunta,
+.header__pregunta
+{
+    font-size: 3.4rem;
+}
+
+.main
+{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.main__data
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .main__data
+    {
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        place-items: center;
+        gap: 5rem;
+    }
+}
+
+.main__timer
+{
+    background-color: var(--granate);
+    color: var(--blanco);
+    font-size: 14rem;
+    padding: 1.5rem;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    place-items: center;
+}
+
+.main__image
+{
+    width: 80%;
+}
+
+.main__puntos
+{
+    font-size: 6.4rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.main__puntossalto
+{
+    display: block;
+    text-align: center;
+}
+
+.main__respuestas
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .main__respuestas
+    {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 5rem;
+    }
+}
+
+.respuesta
+{
+    background-color: var(--grisRespuesta);
+    padding: 1rem 2rem 1rem 2rem;
+    font-size: 5.4rem;
+    border: none;
+    outline: none;
+}
+
+.respuesta:hover
+{
+    cursor: pointer;
+}
+
+.respuesta__acertado
+{
+    background-color: var(--verdeRespuesta);
+}
+
+.respuesta__noacertado
+{
+    background-color: var(--rojoRespuesta);
+}

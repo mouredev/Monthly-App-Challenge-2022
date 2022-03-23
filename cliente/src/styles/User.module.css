@@ -1,0 +1,130 @@
+.header
+{
+    margin: 1rem 0;
+    display: grid;
+    place-items: center;
+}
+
+.header__imagen
+{
+    width: 225px;
+}
+
+.main
+{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .main
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+    }
+}
+
+.main__gorrobox
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.main__gorroimage
+{
+    width: 200px;
+}
+
+.main__titlegorro
+{
+    color: var(--blanco);
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.main__boxsorteocasa
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.main__imagecasa
+{
+    width: 100px;
+}
+
+.formulario
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.formulario__campo
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.formulario__label
+{
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: var(--blanco);
+}
+
+.formulario__input
+{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--blanco);
+    border-bottom: 2px solid var(--blanco);
+}
+
+.formulario__submit
+{
+    border: none;
+    outline: none;
+    padding: 1rem 3rem;
+    font-size: 4rem;
+    color: var(--blanco);
+    background-color: var(--granate);
+    border: 2px solid var(--naranja);
+    border-radius: 1.6rem;
+
+    transition: all .3s ease-in-out;
+}
+
+.formulario__submit:hover
+{
+    color: var(--naranja);
+    cursor: pointer;
+}
+
+.error
+{
+    background-color: var(--granate);
+    color: var(--blanco);
+    border: 3px solid var(--blanco);
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin:  0 auto;
+    width: 100%;
+}

@@ -1,0 +1,41 @@
+.contenedorinicio
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__contenido
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__logo
+{
+    width: 595px;
+    height: 595px;
+}
+
+.main
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.footer
+{
+    color: var(--blanco);
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.footer p
+{
+    margin: 5rem 0;
+    font-size: 4.8rem;
+}

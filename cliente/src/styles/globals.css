@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+@font-face {
+    font-family: 'HarryP';
+    src: url('../../public/font/harrypotter.TTF') format('truetype');
+}
+
+:root
+{
+    --naranja: #FEC300;
+    --granate: #7F0909;
+    --verde: #1CC900;
+    --rojo: #C90000;
+    --blanco: #FFFFFF;
+    --negro: #111111;
+    --gris: #979797;
+    --grisRespuesta: rgb(196 196 196 / .3);
+    --verdeRespuesta: rgb(36 255 0 / .5);
+    --rojoRespuesta: rgb(255 0 0 / .5);
+
+    --fuentePrincipal: 'HarryP', sans-serif;
+    --fuenteSecundaria: 'Roboto', sans-serif;
+    --light: 300;
+    --medium: 500;
+}
+
+html
+{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    height: 100%;
+}
+
+*,
+*::after,
+*::before
+{
+    box-sizing: inherit;
+}
+
+body
+{
+    font-weight: var(--light);
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    background: linear-gradient(-65deg, var(--naranja) 10%, var(--granate) 30%, var(--granate) 80%, var(--naranja) 90%);
+    color: var(--white);
+
+    transition: all .3s ease;
+}
+
+
+h1,
+h2,
+h3,
+p
+{
+    margin: 0;
+}
+
+h1
+{
+    font-weight: var(--bold);
+    font-size: 5.2rem;
+}
+
+h2,
+h3
+{
+    font-weight: var(--medium);
+    font-size: 3.4rem;
+}
+
+a
+{
+    text-decoration: none;
+    font-weight: var(--medium);
+}
+
+.contenedor
+{
+    max-width: 140rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.acertado
+{
+    background-color: var(--verdeRespuesta);
+    padding: 1rem 2rem 1rem 2rem;
+    font-size: 5.4rem;
+    border: none;
+    outline: none;
+}
+
+.noacertado
+{
+    background-color: var(--rojoRespuesta);
+    padding: 1rem 2rem 1rem 2rem;
+    font-size: 5.4rem;
+    border: none;
+    outline: none;
+}
+
+.contenedorspinner
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}

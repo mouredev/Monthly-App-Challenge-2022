@@ -1,0 +1,106 @@
+.header
+{
+    margin: 2rem 0;
+}
+
+.header__contenido
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.header__logo
+{
+    width: 211px;
+    height: 211px;
+}
+
+.main
+{
+    margin: 5rem 0;
+}
+
+.main__contenido
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+}
+
+@media (min-width: 768px) {
+    .main__contenido
+    {
+        flex-direction: row;
+    }
+}
+
+.card
+{
+    background-color: var(--blanco);
+    border-radius: 1.6rem;
+    padding: 1rem 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card__textos
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.card__heading
+{
+    color: var(--verde);
+}
+
+.card__heading,
+.card__headinghardcore
+{
+    color: var(--verde);
+    font-size: 9.6rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card__headinghardcore
+{
+    color: var(--rojo);
+}
+
+.card__separador
+{
+    content: '';
+    background-color: var(--gris);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 12rem;
+    left: 0;
+}
+
+.card__lista
+{
+    font-size: 2.4;
+    font-weight: var(--fina);
+    font-family: var(--fuenteSecundaria);
+    text-transform: uppercase;
+}
+
+.card__listaitem
+{
+    margin-top: 2rem;
+}
+
+.card__boton
+{
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

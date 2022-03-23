@@ -1,0 +1,109 @@
+.header
+{
+    margin: 2rem 0;
+}
+
+.header__contenido
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.header__logo
+{
+    width: 211px;
+    height: 211px;
+}
+
+.main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.main__tablas
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .main__tablas
+    {
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
+
+.main__btn
+{
+    border: none;
+    outline: none;
+    padding: 1rem 2rem;
+    border-radius: 1.6rem;
+    background-color: var(--blanco);
+    font-size: 5.4rem;
+    text-transform: uppercase;
+}
+
+.main__btn:hover
+{
+    cursor: pointer;
+}
+
+.main__btnclasico
+{
+    color: var(--verde);
+}
+
+.main__btnhardcore
+{
+    color: var(--rojo);
+}
+
+.tabla
+{
+    color: var(--blanco);
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.tabla__header
+{
+    font-family: var(--fuenteSecundaria);
+    font-weight: var(--medium);
+    text-transform: uppercase;
+    font-size: 4.6rem;
+}
+
+.tabla__contenedorbody
+{
+    width: 1400px;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.tabla__imagencasa
+{
+    width: 65px;
+}
+
+.tabla__bodytd
+{
+    font-size: 4.2rem;
+}
+
+.active
+{
+    background-color: var(--naranja);
+}
+
