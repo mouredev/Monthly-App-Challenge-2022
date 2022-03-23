@@ -1,3 +1,3 @@
-# LINK SOLUCION STARWARS con REACT (SOLUCIÓN WEB)
+# SOLUCIONES RETOS MENSUALES MOUREDEV
 
-[REPOSITORIO](https://github.com/mellaadev/Monthly-App-Challenge-2022)
+[Harry Potter Quiz React](https://github.com/mellaadev/harrypotterquiz-react-melladev)
