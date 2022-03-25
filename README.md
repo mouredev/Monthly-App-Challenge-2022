@@ -1,4 +1,4 @@
-# solucion reto 3 Neryad
+# Solucion reto 3 Neryad
 * https://github.com/neryad/quizBrais.git
 
 # App Monthly Challenge 2022
