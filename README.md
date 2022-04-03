@@ -1,3 +1,16 @@
+# Mi repositorio 
+
+## Reto 3 - Quiz App Harry Potter
+https://github.com/davidthar/QuizApp
+
+* Es mi primera aplicación utilizando MVVM y Room, probablemente la organización de clases y archivos sea un caos 🤭😆
+
+## Reto 1 - Conecta4
+https://github.com/davidthar/Conecta4
+
+
+
+
 # App Monthly Challenge 2022
 ## Proyecto de retos de creación mensual de aplicaciones de la comunidad **[MoureDev](https://moure.dev)** en base a requisitos.
 
