@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="@color/purple_200"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvActivityName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Actividad: Nombre" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvWorkTotalTimeLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tvBreakTotalTimeLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvActivityName"
+            android:text="Tiempo trabajado:" />
+
+        <ImageView
+            android:id="@+id/ivWorking"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_working"
+            app:layout_constraintBottom_toTopOf="@id/tvWorkTotalTime"
+            app:layout_constraintEnd_toEndOf="@id/tvWorkTotalTimeLabel"
+            app:layout_constraintStart_toStartOf="@id/tvWorkTotalTimeLabel"
+            app:layout_constraintTop_toBottomOf="@id/tvWorkTotalTimeLabel"
+            app:tint="?attr/colorOnPrimary" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvWorkTotalTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/tvWorkTotalTimeLabel"
+            app:layout_constraintStart_toStartOf="@id/tvWorkTotalTimeLabel"
+            app:layout_constraintTop_toBottomOf="@id/ivWorking"
+            tools:text="4 min 30 sec" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvBreakTotalTimeLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvWorkTotalTimeLabel"
+            app:layout_constraintTop_toBottomOf="@id/tvActivityName"
+            android:text="Tiempo descansado:" />
+
+        <ImageView
+            android:id="@+id/ivResting"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_resting"
+            app:layout_constraintBottom_toTopOf="@id/tvBreakTotalTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvBreakTotalTimeLabel"
+            app:layout_constraintTop_toBottomOf="@id/tvBreakTotalTimeLabel"
+            app:tint="?attr/colorOnPrimary" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvBreakTotalTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/tvBreakTotalTimeLabel"
+            app:layout_constraintStart_toStartOf="@id/tvBreakTotalTimeLabel"
+            app:layout_constraintTop_toBottomOf="@id/ivResting"
+            tools:text="4 min 30 sec" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvActivityDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvWorkTotalTime"
+            tools:text="Fecha" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.esaudev.pomodoro.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_setupActivityFragment"
+            app:destination="@id/setupActivityFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_historyFragment"
+            app:destination="@id/historyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/setupActivityFragment"
+        android:name="com.esaudev.pomodoro.ui.setup.SetupActivityFragment"
+        android:label="fragment_setup_activity"
+        tools:layout="@layout/fragment_setup_activity" >
+        <action
+            android:id="@+id/action_setupActivityFragment_to_currentActivityFragment"
+            app:destination="@id/workFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/workFragment"
+        android:name="com.esaudev.pomodoro.ui.works.WorkFragment"
+        android:label="fragment_current_activity"
+        tools:layout="@layout/fragment_work">
+        <argument
+            android:name="activityState"
+            app:argType="com.esaudev.pomodoro.domain.model.CurrentActivity" />
+        <action
+            android:id="@+id/action_currentActivityFragment_to_breakFragment"
+            app:destination="@id/breakFragment"
+            app:popUpTo="@+id/workFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_workFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@+id/homeFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/breakFragment"
+        android:name="com.esaudev.pomodoro.ui.breaks.BreakFragment"
+        android:label="fragment_break"
+        tools:layout="@layout/fragment_break" >
+        <argument
+            android:name="activityState"
+            app:argType="com.esaudev.pomodoro.domain.model.CurrentActivity" />
+        <action
+            android:id="@+id/action_breakFragment_to_currentActivityFragment"
+            app:destination="@id/workFragment"
+            app:popUpTo="@+id/breakFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_breakFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@+id/homeFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.esaudev.pomodoro.ui.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+</navigation>

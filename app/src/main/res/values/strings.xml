@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Pomodoro</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save_disclaimer">Encontrarás esta actividad en la sección <b>Historial</b> del menú principal.</string>
+
+    <string name="notification_title">Ojo al pomodoro</string>
+    <string name="notification_channel_id">pomodoro_channel</string>
+    <string name="notification_channel_name" translatable="true">Pomodoro</string>
+</resources>
