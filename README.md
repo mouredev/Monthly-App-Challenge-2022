@@ -8,12 +8,31 @@ También existen repositorios tanto para Kotlin/Android como para Swift/iOS en l
 [![GitHub Followers](https://img.shields.io/github/stars/mouredev/Weekly-Challenge-2022-Kotlin?label=Repositorio%20público%20retos%20Kotlin/Android&style=social)](https://github.com/mouredev/Weekly-Challenge-2022-Kotlin)
 [![GitHub Followers](https://img.shields.io/github/stars/mouredev/Weekly-Challenge-2022-Swift?label=Repositorio%20público%20retos%20Swift/iOS&style=social)](https://github.com/mouredev/Weekly-Challenge-2022-Swift)
 
+## 📢 NOVEDAD: Rviewer se une a los retos de la comunidad
+
+![https://rviewer.io/](./Rviewer/mouredev_rviewer_challenge.png)
+
+**[Rviewer](https://rviewer.io/)** es la plataforma que te permite poner a prueba tus habilidades en programación mediante la resolución de desafíos tecnológicos reales con el objetivo de prepararte para dar el salto a un nuevo reto profesional.
+
+> A partir del mes de mayo, podrás realizar los retos de programación mensuales a través de **[Rviewer](https://rviewer.io/)**, recibiendo feedback detallado sobre tu código de manos de un experto y la posibilidad de construir tu propio portfolio técnico totalmente GRATIS.  
+
+**Mejoramos el proceso, TOD@S ganamos:**
+
+* Cada mes se presentará un nuevo reto en directo en **[Twitch](https://twitch.tv/mouredev)** y se publicará en **[Rviewer](https://rviewer.io/)** y GitHub.
+* Lo resolverás desde Rviewer, en tu propio repositorio de GitHub.
+* Una vez lo resuelvas, podrás argumentar cómo has creado la app para complementar tu código.
+* Tendrás acceso en exclusiva a un video mío explicando cómo he resuelto el reto de Mayo. 
+* Recibirás feedback personalizado de cada desafío por parte del equipo de Rviewer.
+* Pasado el mes del reto, haremos el directo en **[Twitch](https://twitch.tv/mouredev)** revisando los proyectos presentados por la comunidad.
+* Tod@s los que resuelvan un reto, participarán en el sorteo de **100€ cada mes en material formativo a tu elección**.
+
+
 ## Vídeo explicación retos
 
 <a href="https://youtu.be/14v4IINunvY"><img src="http://i3.ytimg.com/vi/14v4IINunvY/maxresdefault.jpg" style="height: 50%; width:50%;"/></a>
 
 ### El proyecto
-La idea principal es utilizar este proyecto para publicar retos de creación de pequeñas Apps y soluciones en diferentes tecnologías (principalmente iOS y Android, aunque si quieres puedes hacerlo via web/desktop). Es una manera para intentar "forzarnos" a practicar desarrollo de aplicaciones en base a requisitos y de forma colaborativa dentro de la comunidad.
+La idea principal es utilizar este proyecto para publicar retos de creación de pequeñas Apps y soluciones en diferentes tecnologías (principalmente iOS y Android, aunque si quieres puedes hacerlo via mediante web). Es una manera para intentar "forzarnos" a practicar desarrollo de aplicaciones en base a requisitos y de forma colaborativa dentro de la comunidad.
 
 ## Listado de retos
 ### Enero: 03/01/22
@@ -74,7 +93,7 @@ Soluciones: [**ENLACES A LOS REPOSITORIOS**](./SolucionesReto03.md)
 
 La técnica "pomodoro" es un método para mejorar la administración del tiempo dedicado a una actividad e incrementar tu productividad.
 
-**NOTA:** Si se trata de una App Android o Web, agradecería crear un readme con un enlace de descargar o ejecución de la app. Gracias!
+**NOTA:** Si se trata de una App Android o Web, agradecería crear un readme con un enlace de descarga o ejecución de la app. Gracias!
 
 Requisitos:
 
@@ -86,20 +105,44 @@ Requisitos:
 * Se guardará un historial agrupado por día con fecha de inicio y fin del bloque/s de trabajo junto con el texto de la tarea realizada. Tiempo total contando descanso y trabajo. Se guarda cada vez que se detiente el pomodoro. El historial puede estar en una patalla individual. Se mostará primero el registro más reciente.
 * Esta es un tipo de aplicación con la que podemos practicar diseños de UI más elaborados. Intenta hacerla bonita y con animaciones!
 
-Reto en desarrollo...
+Soluciones: [**ENLACES A LOS REPOSITORIOS**](./SolucionesReto04.md)
 
 ### Mayo: 03/05/22
+
+> **[RVIEWER](https://rviewer.io/) se une a los retos mensuales de la comunidad para dar feedback profesional de cada reto y así mejorar nuestras habilidades.**
+
+<a href="https://rviewer.io/"><img src="./Rviewer/mouredev_rviewer_memorygame.png" style="height: 50%; width:50%;"/></a>
+
+**MEMORY GAME:** Crea un "memograma" o "juego de memoria" basado en parejas de cartas.
+
+**NOTA:** Para la revisión en directo desde Twitch se agradece crear un readme con un enlace de descarga o ejecución de la app. Gracias!
+
+¿Quién no ha jugado alguna vez a las parejas de cartas? Desde bien pequeños hasta alguna noche de fiesta, ¿cierto? Bien, para este reto deberás elegir tu temática favorita y recrear el [famoso juego](https://es.wikipedia.org/wiki/Memoria_(juego)). Sorpréndenos! 😉
+
+**¿En qué consiste el reto?**
+
+*Los requisitos del juego son bastante sencillos. En primer lugar, tienes que elegir la temática que quieras, como Pokémon, Star Wars o incluso Peppa Pig.*
+
+*La dinámica del juego consistirá en presentar un tablero con una serie de cartas boca abajo y revelar todas las parejas antes de que se acabe el tiempo. El usuario tocará cada carta para darle la vuelta y, si dos de ellas coinciden al descubrirlas, se pondrán boca arriba. En caso contrario, se volverán a ocultar.*
+
+*El juego se gana si se descubren todas las parejas dentro del límite de tiempo.*
+
+#### ¿Te animas a resolver este desafío? Aquí tienes [todos los detalles](https://go.rviewer.io/dev-memory-game-es/).
+
+### Junio: 31/05/22
 Pendiente de publicación...
 
 ### ¿Cómo puedo participar?
 
-**Puedes hacer libremente un fork del proyecto y trabajar con Git para ir sincronizando las actualizaciones del proyecto.**
+> **Puedes hacer libremente un fork del proyecto y trabajar con Git para ir sincronizando las actualizaciones del proyecto.**
+> 
+> **A PARTIR DEL RETO DE MAYO, PODRÁS RESOLVER EL RETO DIRECTAMENTE DESDE [RVIEWER](https://rviewer.io/).**
 
-* Cada primer lunes del mes se publicará un nuevo reto de código.
-* Los requisitos del reto mensual se publicarán en este mismo README.
+* Cada mes se publicará un nuevo reto de código.
+* Los requisitos o enlace al enunciado del reto mensual se publicarán en este mismo README.
 * Se comunicará en el canal `#🗓reto-mensual` de [Discord](https://mouredev.com/discord), en directo desde [Twitch](https://twitch.tv/mouredev) y se subirá el enunciado al [repositorio](https://github.com/mouredev/Monthly-App-Challenge-2022).
-* Dispondrás de un mes para resolverlo, preguntar tus dudas, debatir y aportar ayuda en el canal de Discord.
-* El primer lunes del mes siguiente (o último del anterior) se subirán enlaces a repositorios de la comunidad con resolucines en diferentes tecnologías, se comentarán en directo desde Twitch **(utilizando resoluciones de entre los asistentes que hayan realizado una `pull request` a mi proyecto con el enlace de GitHub a su proyecto)** y se añadirá el nuevo reto mensual.
+* Dispondrás de un mes para resolverlo, preguntar tus dudas, debatir y aportar ayuda en el canal `#🗓reto-mensual` de Discord.
+* Al finalizar el mes del reto se subirán enlaces a repositorios de la comunidad con resolucines en diferentes tecnologías, se comentarán en directo desde Twitch **(utilizando resoluciones de entre la gente que haya resuelto el reto desde [Rviewer](https://rviewer.io/))** y se añadirá el nuevo reto mensual.
 * Comenzará de nuevo el proceso.
 
 Si quieres unirte a nuestra comunidad de desarrollo, aprender programación de Apps, mejorar tus habilidades y ayudar a la continuidad del proyecto, puedes encontrarnos en:
@@ -107,19 +150,6 @@ Si quieres unirte a nuestra comunidad de desarrollo, aprender programación de A
 [![Twitch](https://img.shields.io/badge/Twitch-Retos_en_directo-9146FF?style=for-the-badge&logo=twitch&logoColor=white&labelColor=101010)](https://twitch.tv/mouredev)
 [![Discord](https://img.shields.io/badge/Discord-Canal_de_chat_para_retos-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=101010)](https://mouredev.com/discord)
 [![Link](https://img.shields.io/badge/Links_de_interés-moure.dev-39E09B?style=for-the-badge&logo=Linktree&logoColor=white&labelColor=101010)](https://mouredev.com)
-
-### Cómo trabajar con Git y GitHub de forma colaborativa
-
-Deberás realizar flujos de actualización, sincronización y `pull request` desde tu `fork` del proyecto hacia el principal (habitualmente nombrado como `upstream/main`).
-Todo esto se puede hacer desde línea de comandos, pero si prefieres puedes usar clientes gráficos como [GitHub Desktop](https://desktop.github.com/) (muy simple) o [GitKraken](https://www.gitkraken.com/invite/cZWhJq1v) (más avanzado y potente).
-
-* Desde tu repo en la propia web de GitHub podrás realizar muchas acciones.
-* Resuelve el reto en tu propio repositorio y realiza una `pull request` a mi repositorio con un **"README_#[número del reto].md" (README_#1.md)** que contenga el enlace al repositorio donde has resuelto el reto.
-* Desde GitHub, una vez hecho el `fork` verás opciones como "Contribute" o "Fetch upstream":
-	* `Contribute` permite abrir una `pull request`(deberás seleccionar el mío como repositorio base contra el que comparar tu proyecto). Así yo podré ver el README con el enlace al tu repo, tal y como comento en el punto anterior. 
-	* `Fetch upstream` permite sincronizar tu proyecto con el original en caso de que se haya actualizado.
-* Para sincronizar tu proyecto con el original y mantenerlo actualizado también puedes hacer un `merge commit`, `squash merge` o `rebase`(ten en cuenta que cada uno se comporta de una manera, conservando o no tus propios cambios).
-* Una vez se publique el nuevo reto, la solución del anterior, y comente las soluciones, cerraré las pasadas `pull request` para dejar paso a las que se hagan para el nuevo reto.
 
 ## ![https://mouredev.com](https://raw.githubusercontent.com/mouredev/mouredev/master/mouredev_emote.png) Hola, mi nombre es Brais Moure.
 ### Freelance full-stack iOS & Android engineer
