@@ -41,7 +41,7 @@ final class CardBoardViewModel : ObservableObject {
     func initializeBoard() {
         
         if(timer == nil){
-            timer = CountdownTimer(timeRemaining: 600){timeRemaining in
+            timer = CountdownTimer(timeRemaining: 60){timeRemaining in
                 self.timeRemaining = timeRemaining
                 
             } onFinished: {
@@ -53,6 +53,7 @@ final class CardBoardViewModel : ObservableObject {
         }
         
         winner = false
+        timeOut = false
         
         matrix = manager.initializeBoard();
         
