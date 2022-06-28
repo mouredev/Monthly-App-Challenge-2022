@@ -136,7 +136,7 @@ Soluciones: [**ENLACES A LOS REPOSITORIOS**](./SolucionesReto05.md)
 
 <a href="https://rviewer.io/"><img src="./Rviewer/mouredev_rviewer_twitterclone.png" style="height: 50%; width:50%;"/></a>
 
-**CLONANDO TWITTER:** Replica la UI del feed de Twitter en tu propia app..
+**CLONANDO TWITTER:** Replica la UI del feed de Twitter en tu propia app.
 
 **NOTA:** Para la revisión en directo desde Twitch se agradece crear un readme con un enlace de descarga o ejecución de la app. Gracias!
 
@@ -151,8 +151,34 @@ El objetivo desde este reto es que seas capaz de replicar la capa visual del fee
 *¡Punto extra! Si quieres desafiarte un poco más, intenta mejorar la aplicación de Twitter.*
 
 #### ¿Te animas a resolver este desafío? Aquí tienes [todos los detalles](https://go.rviewer.io/dev-twitter-mirroring-es/?utm_source=mouredev&utm_medium=github_repo&utm_campaign=twitter_mirroring_mouredev).
+Soluciones: [**ENLACES A LOS REPOSITORIOS**](./SolucionesReto06.md)
 
 ### Julio: 28/06/22
+
+> **[RVIEWER](https://rviewer.io/) apoya los retos mensuales de la comunidad dando feedback profesional de cada reto para así mejorar nuestras habilidades. También, por presentar la prueba durante el mes, entrarás en el sorteo de 100Є en material formativo.**
+
+<a href="https://rviewer.io/"><img src="./Rviewer/mouredev_rviewer_rssreader.png" style="height: 50%; width:50%;"/></a>
+
+**LECTOR RSS:** Crea un agregador de noticias enfocado en un único nicho de mercado.
+
+**NOTA:** Para la revisión en directo desde Twitch se agradece crear un readme con un enlace de descarga, url de la web desplegada o vídeo/capturas con la ejecución de la app. Gracias!
+
+¿Eres capaz de construir el mejor agregador de noticias de un sector?
+
+**¿En qué consiste el reto?**
+
+*Tú decides el nicho que más te guste. Por ejemplo tecnología, desarrollo de software, música, comida, deporte...*
+
+*Crearás una pantalla principal y otras para detalles, marcadores y configuración.*
+
+*¡Punto extra! Aquí mandas tú. Es posible que puedas implementar funcionalidades exclusivas que tengan especial sentido en el nicho que hayas seleccionado... ¡Sorpréndenos!*
+
+#### Fecha de entrega estimada: 29/07/22
+De esta manera podrás recibir feedback técnico sobre tu prueba y asistir a su revisión en directo desde Twitch el día de la publicación del próximo reto mensual.
+
+#### ¿Te animas a resolver este desafío? Aquí tienes [todos los detalles](https://bit.ly/39YdJFC).
+
+### Agosto: 02/08/22
 Pendiente de publicación...
 
 ### ¿Cómo puedo participar?
