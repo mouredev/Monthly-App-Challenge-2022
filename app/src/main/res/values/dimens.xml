@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_title">30sp</dimen>
+    <dimen name="padding_board">10dp</dimen>
+    <dimen name="padding_board_title">30dp</dimen>
+</resources>
