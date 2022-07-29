@@ -1,7 +1,10 @@
+import 'package:brais_wars/Home/pages/home_page.dart';
 import 'package:brais_wars/shared/models/character.models.dart';
+import 'package:brais_wars/shared/models/vehicles.models.dart';
 import 'package:flutter/material.dart';
 
 import '../../shared/models/characters.models.dart';
+import '../../shared/models/films.models.dart';
 
 class DetailsPage extends StatelessWidget {
   const DetailsPage({
@@ -13,182 +16,181 @@ class DetailsPage extends StatelessWidget {
     final argumentsResp = ModalRoute.of(context)!.settings.arguments as Map;
     var characterId = argumentsResp['id'];
     var character = argumentsResp['people'] as Result;
-    return SafeArea(
-        child: Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.black87,
-      ),
-      body: Container(
-        child: Column(
-          children: [
-            Container(
-              decoration: BoxDecoration(color: Colors.black87),
-              width: double.infinity,
-              height: 225,
-              child: Center(
-                child: Column(children: [
-                  CircleAvatar(
-                    radius: 90,
-                    backgroundColor: Color(0xbbFB0202),
-                    child: CircleAvatar(
-                      backgroundImage: NetworkImage(
-                        'https://starwars-visualguide.com/assets/img/characters/${characterId + 1}.jpg',
+
+    //  late List<Films> films;
+    var films = argumentsResp['films'];
+    var vehicles = argumentsResp['vehicles'];
+    return DefaultTabController(
+      length: 3,
+      child: SafeArea(
+          child: Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.black87,
+        ),
+        body: Container(
+          // height: MediaQuery.of(context).size.height,
+          child: Column(
+            children: [
+              Container(
+                decoration: const BoxDecoration(color: Colors.black87),
+                width: double.infinity,
+                height: 225,
+                child: Center(
+                  child: Column(children: [
+                    CircleAvatar(
+                      radius: 90,
+                      backgroundColor: const Color(0xbbFB0202),
+                      child: CircleAvatar(
+                        backgroundImage: NetworkImage(
+                          'https://starwars-visualguide.com/assets/img/characters/${characterId + 1}.jpg',
+                        ),
+                        radius: 85.0,
                       ),
-                      radius: 85.0,
                     ),
-                  ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  Text(
-                    character.name!,
-                    style: TextStyle(color: Colors.white, fontSize: 22),
-                  )
-                ]),
+                    const SizedBox(
+                      height: 10.0,
+                    ),
+                    Text(
+                      character.name!,
+                      style: const TextStyle(color: Colors.white, fontSize: 22),
+                    )
+                  ]),
+                ),
               ),
-            ),
-            Expanded(
-                child: ListView(
+              Container(
+                height: 50,
+                decoration: const BoxDecoration(color: Colors.black54),
+                child: const Padding(
+                  padding: EdgeInsets.all(7.0),
+                  child: TabBar(indicatorColor: Color(0xbbFB0202), tabs: [
+                    Tab(
+                      text: 'Info',
+                    ),
+                    Tab(
+                      text: 'Películas',
+                    ),
+                    Tab(
+                      text: 'Vehículos',
+                    )
+                  ]),
+                ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * .5,
+                child: TabBarView(children: [
+                  infoCharacter(context, character),
+                  infoFilms(films, character.films),
+                  infoVehicles(vehicles, character.vehicles),
+                ]),
+              )
+            ],
+          ),
+        ),
+      )),
+    );
+  }
+}
+
+Widget infoCharacter(BuildContext context, Result character) {
+  return ListView(
+    children: [
+      ListTile(
+        title: const Text('Altura'),
+        trailing: Text(character.height!),
+      ),
+      const Divider(
+        height: 5,
+      ),
+      ListTile(
+        title: const Text('Masa corporal'),
+        trailing: Text(character.mass!),
+      ),
+      const Divider(
+        height: 5,
+      ),
+      ListTile(
+        title: const Text('Año de nacimiento'),
+        trailing: Text(character.birthYear!),
+      ),
+      const Divider(
+        height: 5,
+      )
+    ],
+  );
+}
+
+Widget infoFilms(films, filmsCount) {
+  return FutureBuilder(
+    future: homeServices.getFilms(filmsCount),
+    builder: (context, snapshot) {
+      if (!snapshot.hasData) {
+        return Center(
+            child: Image.asset(
+          "assets/loading.gif",
+          height: 150.0,
+          width: 150.0,
+        ));
+      }
+      return ListView.builder(
+        itemCount: filmsCount.length,
+        itemBuilder: (context, index) {
+          var finalFilms = snapshot.data! as List<Films>;
+          return Column(
+            children: [
+              ListTile(
+                  title: Text(finalFilms[index].title),
+                  trailing:
+                      Text(finalFilms[index].releaseDate.year.toString())),
+              const Divider(
+                height: 5,
+              )
+            ],
+          );
+        },
+      );
+    },
+  );
+}
+
+Widget infoVehicles(vehicles, vehiclesCount) {
+  return FutureBuilder(
+    future: homeServices.getVehicles(vehiclesCount),
+    builder: (context, snapshot) {
+      return ListView.builder(
+        itemCount: vehiclesCount.length,
+        itemBuilder: (context, filmsCount) {
+          if (!snapshot.hasData) {
+            return Center(
+                child: Image.asset(
+              "assets/loading.gif",
+              height: 150.0,
+              width: 150.0,
+            ));
+          } else {
+            var finalVehicles = snapshot.data! as List<Vehicles>;
+
+            if (finalVehicles.isEmpty) {
+              return const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Center(child: Text('No vehículos')),
+              );
+            }
+            return Column(
               children: [
                 ListTile(
-                  title: Text('Altura'),
-                  trailing: Text(character.height!),
+                  title: Text('- ${finalVehicles[filmsCount].name}'),
                 ),
-                Divider(
-                  height: 5,
-                ),
-                ListTile(
-                  title: Text('Masa corporal'),
-                  trailing: Text(character.mass!),
-                ),
-                Divider(
-                  height: 5,
-                ),
-                ListTile(
-                  title: Text('Año de nacimiento'),
-                  trailing: Text(character.birthYear!),
-                ),
-                Divider(
+                const Divider(
                   height: 5,
                 )
               ],
-            ))
-          ],
-        ),
-      ),
-    ));
-    // return SafeArea(
-    //     child: Scaffold(
-    //   body: Stack(
-    //     children: [
-    //       Column(children: [
-    //         ClipPath(
-    //           clipper: BackgroundWaveClipper(),
-    //           child: Container(
-    //             width: MediaQuery.of(context).size.width,
-    //             height: 280,
-    //             decoration: const BoxDecoration(
-    //                 gradient: LinearGradient(
-    //                     colors: [Color(0xbb8E0E00), Color(0xbb1F1C18)])),
-    //           ),
-    //         ),
-    //         Positioned(
-    //           top: 16,
-    //           left: 16,
-    //           right: 16,
-    //           child: Container(
-    //               child: Container(
-    //             decoration:
-    //                 BoxDecoration(borderRadius: BorderRadius.circular(10)),
-    //             margin: const EdgeInsets.all(5.0),
-    //             child: SizedBox(
-    //               width: 100,
-    //               height: 100,
-    //               child: ClipRRect(
-    //                 borderRadius: BorderRadius.circular(10),
-    //                 child: Image.network(
-    //                   'https://starwars-visualguide.com/assets/img/characters/${characterId + 1}.jpg',
-    //                   fit: BoxFit.cover,
-    //                 ),
-    //               ),
-    //             ),
-    //           )),
-    //         )
-    //       ])
-    //     ],
-    //   ),
-    // ));
-    // return SafeArea(
-    //   child: Scaffold(
-    //       appBar: AppBar(
-    //         elevation: 0,
-    //         backgroundColor: const Color(0xbb1F1D29),
-    //       ),
-    //       body: SizedBox(
-    //         height: MediaQuery.of(context).size.height,
-    //         child: Column(
-    //           children: [
-    //             Row(
-    //               children: [
-    //                 Container(
-    //                   height: MediaQuery.of(context).size.height * .5,
-    //                   width: MediaQuery.of(context).size.width,
-    //                   color: const Color(0xbb1F1D29),
-    //                   child: Container(
-    //                     decoration: BoxDecoration(
-    //                         borderRadius: BorderRadius.circular(10)),
-    //                     margin: const EdgeInsets.all(5.0),
-    //                     child: SizedBox(
-    //                       // width: 100,
-    //                       // height: 100,
-    //                       child: ClipRRect(
-    //                         borderRadius: BorderRadius.circular(10),
-    //                         child: Image.network(
-    //                           'https://starwars-visualguide.com/assets/img/characters/${characterId + 1}.jpg',
-    //                           fit: BoxFit.cover,
-    //                         ),
-    //                       ),
-    //                     ),
-    //                   ),
-    //                 )
-    //               ],
-    //             ),
-    //             const SizedBox(
-    //               height: 20,
-    //             ),
-    //             Text(character.name!),
-    //             const SizedBox(
-    //               height: 20,
-    //             ),
-    //             Expanded(
-    //                 child: ListView(
-    //               children: [
-    //                 ListTile(
-    //                   title: Text('Altura: ${character.height!}'),
-    //                 ),
-    //                 const Divider(
-    //                   color: Colors.red,
-    //                 ),
-    //                 ListTile(
-    //                   title: Text('Masa corporal: ${character.mass!}'),
-    //                 ),
-    //                 const Divider(
-    //                   color: Colors.red,
-    //                 ),
-    //                 ListTile(
-    //                   title: Text('Año de nacimiento: ${character.birthYear}'),
-    //                 ),
-    //                 const Divider(
-    //                   color: Colors.red,
-    //                 ),
-    //               ],
-    //             ))
-    //           ],
-    //         ),
-    //       )),
-    // );
-  }
+            );
+          }
+        },
+      );
+    },
+  );
 }
 
 class BackgroundWaveClipper extends CustomClipper<Path> {
@@ -210,8 +212,3 @@ class BackgroundWaveClipper extends CustomClipper<Path> {
   @override
   bool shouldReclip(BackgroundWaveClipper oldClipper) => oldClipper != this;
 }
-
-// AppBar(
-//             elevation: 0,
-//             backgroundColor: const Color(0xbb1F1D29),
-//           ),
