@@ -1,12 +1,11 @@
-# App Monthly Challenge 2022
+# Retos de programación mensuales 2022
 ## Proyecto de retos de creación mensual de aplicaciones de la comunidad **[MoureDev](https://moure.dev)** en base a requisitos.
+### Todos nuestros retos en **[retosdeprogramacion.com/mensuales2022](https://retosdeprogramacion.com/mensuales2022)**
 
-![https://mouredev.com/discord](https://github.com/mouredev/mouredev/blob/master/mouredev_weekly_challenge.png)
+También existen repositorios en los que se publicarán semanalmente pequeños retos de código para mejorar nuestra lógica de programación.
 
-También existen repositorios tanto para Kotlin/Android como para Swift/iOS en los que se publicarán semanalmente pequeños retos de código. Así podrás elegir el que mejor se adapta a tus necesidades (o practicar en todos).
-
-[![GitHub Followers](https://img.shields.io/github/stars/mouredev/Weekly-Challenge-2022-Kotlin?label=Repositorio%20público%20retos%20Kotlin/Android&style=social)](https://github.com/mouredev/Weekly-Challenge-2022-Kotlin)
-[![GitHub Followers](https://img.shields.io/github/stars/mouredev/Weekly-Challenge-2022-Swift?label=Repositorio%20público%20retos%20Swift/iOS&style=social)](https://github.com/mouredev/Weekly-Challenge-2022-Swift)
+[![GitHub Weekly Kotlin](https://img.shields.io/github/stars/mouredev/Weekly-Challenge-2022-Kotlin?label=Retos%20Semanales&style=social)](https://github.com/mouredev/Weekly-Challenge-2022-Kotlin)
+[![GitHub Weekly Swift](https://img.shields.io/github/stars/mouredev/Weekly-Challenge-2022-Swift?label=Retos%20Semanales%20en%20Swift&style=social)](https://github.com/mouredev/Weekly-Challenge-2022-Swift)
 
 ## 📢 NOVEDAD: Rviewer se une a los retos de la comunidad
 
