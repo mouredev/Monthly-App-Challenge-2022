@@ -196,14 +196,31 @@ Soluciones: [**ENLACES A LOS REPOSITORIOS**](./SolucionesReto07.md)
 
 *Una vez realizado, accederás a una sala de chat donde se visualizarán los mensajes de todos los usuarios y podrás interactuar con ellos.*
 
-*¡Punto extra! ¿Eres capaz de enviar notificaciones push a otro dispositivo cada vez que te escriben?¿E imágenes?*
+*¡Punto extra! ¿Eres capaz de enviar notificaciones push a otro dispositivo cada vez que te escriben? ¿E imágenes?*
 
 #### Fecha de entrega estimada: 27/08/22
 De esta manera podrás recibir feedback técnico sobre tu prueba y asistir a su revisión en directo desde Twitch el día de la publicación del próximo reto mensual.
 
 #### ¿Te animas a resolver este desafío? Aquí tienes [todos los detalles](https://bit.ly/3vyk6ap).
+Soluciones: [**ENLACES A LOS REPOSITORIOS**](./SolucionesReto08.md)
 
 ### Septiembre: 30/08/22
+
+> **El 13 de Septiembre celebramos el "Día de la Programación". Un día para compartir y pasar en comunidad.**
+
+<a href="https://rviewer.io/"><img src="./Rviewer/mouredev_rviewer_diadelaprogramacion.jpg" style="height: 50%; width:50%;"/></a>
+
+**HACKATHONES DÍA DE LA PROGRAMACIÓN: Este es un mes muy especial, entra en [https://diadelaprogramacion.com](https://diadelaprogramacion.com) y descubre las instrucciones de las aplicaciones a crear. Puedes ganar 8000€ en premios.**
+
+#### Fecha de entrega Hackathon: hasta el 11/09/22
+Esta es la fecha de entrega límite para poder participar en la hackathon.
+
+#### Fecha de entrega reto mensual: 27/09/22
+De esta manera podrás recibir feedback técnico sobre tu prueba y asistir a su revisión en directo desde Twitch el día de la publicación del próximo reto mensual.
+
+#### ¿Te animas a resolver este desafío? Aquí tienes [todos los detalles](https://diadelaprogramacion.com).
+
+### Octubre: 29/09/22
 Pendiente de publicación...
 
 ### ¿Cómo puedo participar?
