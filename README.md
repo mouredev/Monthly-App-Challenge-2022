@@ -208,9 +208,9 @@ Soluciones: [**ENLACES A LOS REPOSITORIOS**](./SolucionesReto08.md)
 
 > **El 13 de Septiembre celebramos el "Día de la Programación". Un día para compartir y pasar en comunidad.**
 
-<a href="https://rviewer.io/"><img src="./Rviewer/mouredev_rviewer_diadelaprogramacion.jpg" style="height: 50%; width:50%;"/></a>
+<a href="https://rviewer.io/"><img src="./Rviewer/mouredev_rviewer_diadelaprogramacion.png" style="height: 50%; width:50%;"/></a>
 
-**HACKATHONES DÍA DE LA PROGRAMACIÓN: Este es un mes muy especial, entra en [https://diadelaprogramacion.com](https://diadelaprogramacion.com) y descubre las instrucciones de las aplicaciones a crear. Puedes ganar 8000€ en premios.**
+**HACKATHON DÍA DE LA PROGRAMACIÓN: Este es un mes muy especial, celebramos el ["Día de la Programación"](https://diadelaprogramacion.com)
 
 #### Fecha de entrega Hackathon: hasta el 11/09/22
 Esta es la fecha de entrega límite para poder participar en la hackathon.
@@ -218,9 +218,35 @@ Esta es la fecha de entrega límite para poder participar en la hackathon.
 #### Fecha de entrega reto mensual: 27/09/22
 De esta manera podrás recibir feedback técnico sobre tu prueba y asistir a su revisión en directo desde Twitch el día de la publicación del próximo reto mensual.
 
-#### ¿Te animas a resolver este desafío? Aquí tienes [todos los detalles](https://diadelaprogramacion.com).
+#### ¿Te animas a resolver este desafío? Aquí tienes [todos los detalles](https://bit.ly/3AxPhEj).
+Soluciones: [**ENLACES A LOS REPOSITORIOS**](./SolucionesReto09.md)
 
 ### Octubre: 29/09/22
+
+> **[RVIEWER](https://rviewer.io/) apoya los retos mensuales de la comunidad dando feedback profesional de cada reto para así mejorar nuestras habilidades. También, por presentar la prueba durante el mes, entrarás en el sorteo de 100Є en material formativo.**
+
+<a href="https://rviewer.io/"><img src="./Rviewer/mouredev_rviewer_unitconverter.png" style="height: 50%; width:50%;"/></a>
+
+**CONVERSOR DE UNIDADES:** Crea una applicación para encontrar la equivalencia de un valor en diferentes unidades de medida.
+
+**NOTA:** Para la revisión en directo desde Twitch se agradece crear un readme con un enlace de descarga del ejecutable, url de la web desplegada o vídeo/capturas con la ejecución de la app. Gracias!
+
+¿Has probado alguna vez crear tu propio conversor de unidades? Sí, una app con la que puedas transformar unidades de manera instantánea. Peso, temperatura, tiempo, longitud, potencia, monetarias... ¡Y muchísimas más!
+
+**¿En qué consiste el reto?**
+
+*Si tu applicación es capaz de transformar muchos tipos de unidades, debe poseer una pantalla de selección y una de detalle con el conversor.*
+
+*Si decides que tu aplicación únicamente soporte una familia de unidades, puede estar todo en una única pantalla.*
+
+*¡Punto extra! ¿Te atreves a utilizar otro tipo de unidades de medición menos comunes?*
+
+#### Fecha de entrega estimada: 25/08/22
+De esta manera podrás recibir feedback técnico sobre tu prueba y asistir a su revisión en directo desde Twitch el día de la publicación del próximo reto mensual.
+
+#### ¿Te animas a resolver este desafío? Aquí tienes [todos los detalles](https://bit.ly/3dQMNcI).
+
+### Noviembre: 27/10/22
 Pendiente de publicación...
 
 ### ¿Cómo puedo participar?
