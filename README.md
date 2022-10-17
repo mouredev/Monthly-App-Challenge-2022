@@ -241,12 +241,12 @@ Soluciones: [**ENLACES A LOS REPOSITORIOS**](./SolucionesReto09.md)
 
 *¡Punto extra! ¿Te atreves a utilizar otro tipo de unidades de medición menos comunes?*
 
-#### Fecha de entrega estimada: 25/08/22
+#### Fecha de entrega estimada: 24/08/22
 De esta manera podrás recibir feedback técnico sobre tu prueba y asistir a su revisión en directo desde Twitch el día de la publicación del próximo reto mensual.
 
 #### ¿Te animas a resolver este desafío? Aquí tienes [todos los detalles](https://bit.ly/3dQMNcI).
 
-### Noviembre: 27/10/22
+### Noviembre: 26/10/22
 Pendiente de publicación...
 
 ### ¿Cómo puedo participar?
