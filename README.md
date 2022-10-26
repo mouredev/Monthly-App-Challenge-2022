@@ -268,7 +268,7 @@ Muy fácil, no tienes que registrarte, una pizza puede estar compuesta hasta por
 
 *¡Punto extra! ¿Te atreves a solicitar los datos de envío o a añadir algún método de pago?*
 
-#### Fecha de entrega estimada: 27/10/22
+#### Fecha de entrega estimada: 27/11/22
 De esta manera podrás recibir feedback técnico sobre tu prueba y asistir a su revisión en directo desde Twitch el día de la publicación del próximo reto mensual.
 
 #### ¿Te animas a resolver este desafío? Aquí tienes [todos los detalles](https://bit.ly/3DdS5HY).
