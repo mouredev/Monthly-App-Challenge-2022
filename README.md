@@ -245,8 +245,37 @@ Soluciones: [**ENLACES A LOS REPOSITORIOS**](./SolucionesReto09.md)
 De esta manera podrás recibir feedback técnico sobre tu prueba y asistir a su revisión en directo desde Twitch el día de la publicación del próximo reto mensual.
 
 #### ¿Te animas a resolver este desafío? Aquí tienes [todos los detalles](https://bit.ly/3dQMNcI).
+Soluciones: [**ENLACES A LOS REPOSITORIOS**](./SolucionesReto10.md)
 
 ### Noviembre: 26/10/22
+
+> **[RVIEWER](https://rviewer.io/) apoya los retos mensuales de la comunidad dando feedback profesional de cada reto para así mejorar nuestras habilidades. También, por presentar la prueba durante el mes, entrarás en el sorteo de 100Є en material formativo.**
+
+<a href="https://rviewer.io/"><img src="./Rviewer/mouredev_rviewer_pizza.png" style="height: 50%; width:50%;"/></a>
+
+**BUON APPETITO:** Existen ciertos proyectos de software muy habituales. Las tiendas online son uno de ellos. Crea una aplicación que sea capaz de gestionar el pedido en nuestra pizzería perfecta.
+
+**NOTA:** Para la revisión en directo desde Twitch se agradece crear un readme con un enlace de descarga del ejecutable, url de la web desplegada o vídeo/capturas con la ejecución de la app. Gracias!
+
+Pero, ¿por qué es perfecta?
+Muy fácil, no tienes que registrarte, una pizza puede estar compuesta hasta por 4 tipos, podrás eliminar ingredientes y conoceremos "un truco" para no tener que pagarlas.
+
+**¿En qué consiste el reto?**
+
+*Al abrir la aplicación se nos presentará el listado de pizzas del restaurante.*
+
+*Podrás consultar el detalle de la pizza para editarla y acceder al carrito de la compra para finalizar el pedido.*
+
+*¡Punto extra! ¿Te atreves a solicitar los datos de envío o a añadir algún método de pago?*
+
+#### Fecha de entrega estimada: 27/10/22
+De esta manera podrás recibir feedback técnico sobre tu prueba y asistir a su revisión en directo desde Twitch el día de la publicación del próximo reto mensual.
+
+#### ¿Te animas a resolver este desafío? Aquí tienes [todos los detalles](https://bit.ly/3DdS5HY).
+
+### Diciembre: 30/11/22
+[🔔 Añadir un recordatorio para asistir al evento en Directo](https://discord.gg/35TUhUNy3k?event=1034824429491982386)
+
 Pendiente de publicación...
 
 ### ¿Cómo puedo participar?
