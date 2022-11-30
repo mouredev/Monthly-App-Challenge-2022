@@ -7,21 +7,9 @@ También existen repositorios en los que se publicarán semanalmente pequeños r
 [![GitHub Weekly Kotlin](https://img.shields.io/github/stars/mouredev/Weekly-Challenge-2022-Kotlin?label=Retos%20Semanales&style=social)](https://github.com/mouredev/Weekly-Challenge-2022-Kotlin)
 [![GitHub Weekly Swift](https://img.shields.io/github/stars/mouredev/Weekly-Challenge-2022-Swift?label=Retos%20Semanales%20en%20Swift&style=social)](https://github.com/mouredev/Weekly-Challenge-2022-Swift)
 
-## 📢 NOVEDAD: Rviewer se une a los retos de la comunidad
-
-![https://rviewer.io/](./Rviewer/mouredev_rviewer_challenge.png)
-
-**[Rviewer](https://rviewer.io/)** es la plataforma que te permite poner a prueba tus habilidades en programación mediante la resolución de desafíos tecnológicos reales con el objetivo de prepararte para dar el salto a un nuevo reto profesional.
-
-> A partir del mes de mayo, podrás realizar los retos de programación mensuales a través de **[Rviewer](https://rviewer.io/)**, recibiendo feedback detallado sobre tu código de manos de un experto y la posibilidad de construir tu propio portfolio técnico totalmente GRATIS.  
-
-**Mejoramos el proceso, TOD@S ganamos:**
-
-* Cada mes se presentará un nuevo reto en directo en **[Twitch](https://twitch.tv/mouredev)** y se publicará en **[Rviewer](https://rviewer.io/)** y GitHub.
-* Lo resolverás desde Rviewer, en tu propio repositorio de GitHub.
-* Una vez lo resuelvas, podrás argumentar cómo has creado la app para complementar tu código.
-* Tendrás acceso en exclusiva a un video mío explicando cómo he resuelto el reto de Mayo. 
-* Recibirás feedback personalizado de cada desafío por parte del equipo de Rviewer.
+* Cada mes se presentará un nuevo reto en directo en **[Twitch](https://twitch.tv/mouredev)** y se publicará en **[retosdeprogramacion.com](https://retosdeprogramacion.com/mensuales2022)** y GitHub.
+* Lo resolverás tu propio repositorio de GitHub.
+* Una vez lo resuelvas, deberás hacer una PULL REQUEST a este repositorio indicando la url de tu repositorio de resolución.
 * Pasado el mes del reto, haremos el directo en **[Twitch](https://twitch.tv/mouredev)** revisando los proyectos presentados por la comunidad.
 * Tod@s los que resuelvan un reto, participarán en el sorteo de **100€ cada mes en material formativo a tu elección**.
 
@@ -272,23 +260,46 @@ Muy fácil, no tienes que registrarte, una pizza puede estar compuesta hasta por
 De esta manera podrás recibir feedback técnico sobre tu prueba y asistir a su revisión en directo desde Twitch el día de la publicación del próximo reto mensual.
 
 #### ¿Te animas a resolver este desafío? Aquí tienes [todos los detalles](https://bit.ly/3DdS5HY).
+Soluciones: [**ENLACES A LOS REPOSITORIOS**](./SolucionesReto11.md)
 
 ### Diciembre: 30/11/22
-[🔔 Añadir un recordatorio para asistir al evento en Directo](https://discord.gg/35TUhUNy3k?event=1034824429491982386)
+
+<a href=https://retosdeprogramacion.com/mensuales2022"><img src="./Images/reto_diciembre_22.jpg" style="height: 50%; width:50%;"/></a>
+
+**LA DEVSTORE:** Un lugar para comprar ropa y complementos para developers... ¿Genialidad o locura?
+
+Crea una web o app que funcione como un sitio donde encontrar aquellos productos que crees que todo developer debería conocer. En este [Tweet](https://twitter.com/MoureDev/status/1597625149838479360?s=20&t=uyXkUz_OX1-54E9ava1ObA) te dejo agunas ideas divertidas aportadas por la comunidad.
+
+**NOTA:** Para la revisión en directo desde Twitch se agradece crear un readme en tu repositorio con un enlace de descarga del ejecutable, url de la web desplegada o vídeo/capturas con la ejecución de la app. Gracias!
+
+**¿En qué consiste el reto?**
+
+*Deberás crear una tienda online pero sin tienda... ¿Cómo? Tu web o app puede servir para enlazar a los productos que venden tiendas online reales (Amazon, por ejemplo) y así utilizar enlaces de referidos que te aporten ingresos.*
+
+*La tienda deberá poseer una sección de productos destacados y diferentes filtros para agrupar por categoría. Los productos son de tu total elección, y cada uno debe tener foto (o más de una) y descripción (e información extra si así lo quieres).*
+
+*¡Punto extra! Es el último reto del año... ¿Quieres formar un equipo de hasta 3 personas (tienen que existir commits de 3 personas) para llevar a cabo el reto? Este es el momento.*
+
+##### Entrega la resolución del reto y participa en el sorteo de 100€ en material formativo (300€ máximo en caso de un equipo de 3 personas)
+
+#### ¿Te animas a resolver este desafío? Aquí tienes [todos los detalles](https://retosdeprogramacion.com/mensuales2022).
+
+### Corrección y nuevo reto: 29/12/22
+[🔔 Añadir un recordatorio para asistir al evento en Directo](https://discord.gg/mouredev)
 
 Pendiente de publicación...
 
 ### ¿Cómo puedo participar?
 
-> **Puedes hacer libremente un fork del proyecto y trabajar con Git para ir sincronizando las actualizaciones del proyecto.**
+> **Puedes hacer libremente un fork del proyecto y trabajar con Git para compartir mediante una PULL REQUEST la url de resolución de cada reto.**
 > 
-> **A PARTIR DEL RETO DE MAYO, PODRÁS RESOLVER EL RETO DIRECTAMENTE DESDE [RVIEWER](https://rviewer.io/).**
+> **LOS RETOS DE MAYO Y NOVIEMBRE LOS PODRÁS RESOLVER DIRECTAMENTE DESDE [RVIEWER](https://rviewer.io/).**
 
 * Cada mes se publicará un nuevo reto de código.
 * Los requisitos o enlace al enunciado del reto mensual se publicarán en este mismo README.
 * Se comunicará en el canal `#🗓reto-mensual` de [Discord](https://mouredev.com/discord), en directo desde [Twitch](https://twitch.tv/mouredev) y se subirá el enunciado al [repositorio](https://github.com/mouredev/Monthly-App-Challenge-2022).
 * Dispondrás de un mes para resolverlo, preguntar tus dudas, debatir y aportar ayuda en el canal `#🗓reto-mensual` de Discord.
-* Al finalizar el mes del reto se subirán enlaces a repositorios de la comunidad con resolucines en diferentes tecnologías, se comentarán en directo desde Twitch **(utilizando resoluciones de entre la gente que haya resuelto el reto desde [Rviewer](https://rviewer.io/))** y se añadirá el nuevo reto mensual.
+* Al finalizar el mes del reto se subirán enlaces a repositorios de la comunidad con resolucines en diferentes tecnologías, se comentarán en directo desde Twitch **(utilizando resoluciones de entre la gente que haya resuelto el reto)** y se añadirá el nuevo reto mensual.
 * Comenzará de nuevo el proceso.
 
 #### Puedes apoyar mi trabajo haciendo "☆ Star" en el repo o nominarme a "GitHub Star". ¡Gracias!
