@@ -264,7 +264,8 @@ Soluciones: [**ENLACES A LOS REPOSITORIOS**](./SolucionesReto11.md)
 
 ### Diciembre: 30/11/22
 
-<a href=https://retosdeprogramacion.com/mensuales2022"><img src="./Images/reto_diciembre_22.jpg" style="height: 50%; width:50%;"/></a>
+<a href="https://retosdeprogramacion.com/mensuales2022"><img src="./Images/reto_diciembre_22.jpg" style="height: 50%; width:50%;"/></a>
+
 
 **LA DEVSTORE:** Un lugar para comprar ropa y complementos para developers... ¿Genialidad o locura?
 
