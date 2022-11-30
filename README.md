@@ -286,7 +286,7 @@ Crea una web o app que funcione como un sitio donde encontrar aquellos productos
 #### ¿Te animas a resolver este desafío? Aquí tienes [todos los detalles](https://retosdeprogramacion.com/mensuales2022).
 
 ### Corrección y nuevo reto: 29/12/22
-[🔔 Añadir un recordatorio para asistir al evento en Directo](https://discord.gg/mouredev)
+[🔔 Añadir un recordatorio para asistir al evento en Directo](https://discord.gg/mouredev?event=1047620703437987870)
 
 Pendiente de publicación...
 
