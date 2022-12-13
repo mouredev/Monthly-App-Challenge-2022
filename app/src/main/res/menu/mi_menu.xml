@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/more"
+        android:title="Menu"
+        android:icon="@drawable/ic_more"
+        android:iconTint="@color/white"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/home"
+                android:icon="@drawable/ic_home"
+                android:title="Home">
+            </item>
+            <item
+                android:id="@+id/textil"
+                android:icon="@drawable/ic_textil"
+                android:title="Textil">
+            </item>
+            <item
+                android:id="@+id/gadgets"
+                android:icon="@drawable/ic_gadgets"
+                android:title="Gadgets">
+            </item>
+            <item
+                android:id="@+id/videos"
+                android:icon="@drawable/ic_videos"
+                android:title="Videos">
+            </item>
+        </menu>
+
+    </item>
+
+</menu>

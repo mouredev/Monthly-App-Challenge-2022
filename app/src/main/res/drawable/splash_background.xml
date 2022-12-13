@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+
+    <item android:drawable="@color/purple_500"/>
+    <item
+        android:left="0dp"
+        android:right="0dp"
+        android:top="230dp"
+        android:bottom="230dp"
+        android:gravity="center">
+        <bitmap android:src="@drawable/splash4"/>
+
+    </item>
+</layer-list>
