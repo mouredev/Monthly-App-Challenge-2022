@@ -284,11 +284,11 @@ Crea una web o app que funcione como un sitio donde encontrar aquellos productos
 ##### Entrega la resolución del reto y participa en el sorteo de 100€ en material formativo (300€ máximo en caso de un equipo de 3 personas)
 
 #### ¿Te animas a resolver este desafío? Aquí tienes [todos los detalles](https://retosdeprogramacion.com/mensuales2022).
+Soluciones: [**ENLACES A LOS REPOSITORIOS**](./SolucionesReto12.md)
 
-### Corrección y nuevo reto: 29/12/22
-[🔔 Añadir un recordatorio para asistir al evento en Directo](https://discord.gg/mouredev?event=1047620703437987870)
+Aquí finalizan los retos mensuales de 2022.
 
-Pendiente de publicación...
+> **[🆕ACCEDE A LOS NUEVOS RETOS SEMANALES PARA 2023](https://github.com/mouredev/retos-programacion-2023)**
 
 ### ¿Cómo puedo participar?
 
