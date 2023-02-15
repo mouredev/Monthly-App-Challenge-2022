@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <!-- Players names -->
+    <LinearLayout
+        android:id="@+id/llPlayers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_board"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:baselineAligned="false">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPlayerOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/player_1"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="TextContrastCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPlayerTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/player_2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="TextContrastCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <!-- Winner text and play again button -->
+    <LinearLayout
+        android:id="@+id/llWinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_board"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llPlayers"
+        android:baselineAligned="false"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvWinnerRed"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/winner"
+            android:textSize="@dimen/text_title"
+            android:textColor="@color/red"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/btnPlayAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/play_again"
+            android:backgroundTint="@color/purple_500"/>
+
+
+        <TextView
+            android:id="@+id/tvWinnerYellow"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/winner"
+            android:textSize="@dimen/text_title"
+            android:textColor="@color/yellow"
+            android:visibility="invisible"/>
+
+
+    </LinearLayout>
+
+    <!-- Scores -->
+    <LinearLayout
+        android:id="@+id/llScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_board"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llWinner"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/tvScore1"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/Red"/>
+
+
+        <TextView
+            android:id="@+id/tvP1Score"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/score_1"/>
+
+        <TextView
+            android:id="@+id/tvScore2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/Yellow"/>
+
+        <TextView
+            android:id="@+id/tvP2Score"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/score_1"/>
+
+
+    </LinearLayout>
+
+    <!-- Control buttons -->
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_board"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llScore"
+        android:baselineAligned="false">
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/padding_board"
+            android:text="@string/reset"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/purple_700"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/restart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/padding_board"
+            android:text="@string/restart"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/purple_200"
+            style="?android:attr/buttonBarButtonStyle" />
+
+
+    </LinearLayout>
+
+    <!-- Board area -->
+    <!-- Buttons to take your turn/action in each column -->
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="50dp"
+        android:layout_height="335dp"
+        android:background="?android:attr/selectableItemBackground"
+        app:layout_constraintTop_toTopOf="@id/gameBoard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/token00"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="194dp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="50dp"
+        android:layout_height="335dp"
+        android:background="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/button0"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button0"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="50dp"
+        android:layout_height="335dp"
+        android:background="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/button1"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="50dp"
+        android:layout_height="335dp"
+        android:background="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="50dp"
+        android:layout_height="335dp"
+        android:background="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="50dp"
+        android:layout_height="335dp"
+        android:background="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="50dp"
+        android:layout_height="335dp"
+        android:layout_marginEnd="10dp"
+        android:background="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <!-- Image for game board -->
+    <ImageView
+        android:id="@+id/gameBoard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llButtons"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/connect_4_board" />
+
+    <!-- ImageViews organized by token <row><column> -->
+    <ImageView
+        android:id="@+id/token00"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gameBoard"
+        app:layout_constraintStart_toStartOf="@+id/token10"
+        app:layout_constraintTop_toBottomOf="@+id/token10"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token01"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token00"
+        app:layout_constraintEnd_toStartOf="@+id/token02"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token00"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+    <ImageView
+        android:id="@+id/token02"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token01"
+        app:layout_constraintEnd_toStartOf="@+id/token03"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token01"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token03"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token02"
+        app:layout_constraintEnd_toStartOf="@+id/token04"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token02"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+    <ImageView
+        android:id="@+id/token04"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token03"
+        app:layout_constraintEnd_toStartOf="@+id/token05"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token03"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token05"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token04"
+        app:layout_constraintEnd_toStartOf="@+id/token06"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token04"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+    <ImageView
+        android:id="@+id/token06"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token05"
+        app:layout_constraintEnd_toEndOf="@+id/token16"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token10"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/token00"
+        app:layout_constraintStart_toStartOf="@+id/token20"
+        app:layout_constraintTop_toBottomOf="@+id/token20"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+    <ImageView
+        android:id="@+id/token11"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token10"
+        app:layout_constraintEnd_toStartOf="@+id/token12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token10"
+        app:srcCompat="@drawable/game_piece_red80"/>
+
+    <ImageView
+        android:id="@+id/token12"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token11"
+        app:layout_constraintEnd_toStartOf="@+id/token13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token11"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+    <ImageView
+        android:id="@+id/token13"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token12"
+        app:layout_constraintEnd_toStartOf="@+id/token14"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token12"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token14"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token13"
+        app:layout_constraintEnd_toStartOf="@+id/token15"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token13"
+        app:srcCompat="@drawable/game_piece_yellow80"/>
+
+    <ImageView
+        android:id="@+id/token15"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token14"
+        app:layout_constraintEnd_toStartOf="@+id/token16"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token14"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token16"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token15"
+        app:layout_constraintEnd_toEndOf="@+id/token26"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+    <ImageView
+        android:id="@+id/token20"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/token10"
+        app:layout_constraintStart_toStartOf="@+id/token30"
+        app:layout_constraintTop_toBottomOf="@+id/token30"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token21"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token20"
+        app:layout_constraintEnd_toStartOf="@+id/token22"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token20"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+    <ImageView
+        android:id="@+id/token22"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token21"
+        app:layout_constraintEnd_toStartOf="@+id/token23"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token21"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token23"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token22"
+        app:layout_constraintEnd_toStartOf="@+id/token24"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token22"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+    <ImageView
+        android:id="@+id/token24"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token23"
+        app:layout_constraintEnd_toStartOf="@+id/token25"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token23"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token25"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token24"
+        app:layout_constraintEnd_toStartOf="@+id/token26"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token24"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+    <ImageView
+        android:id="@+id/token26"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token25"
+        app:layout_constraintEnd_toEndOf="@+id/token36"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token30"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/token20"
+        app:layout_constraintStart_toStartOf="@+id/token40"
+        app:layout_constraintTop_toBottomOf="@+id/token40"
+        app:srcCompat="@drawable/game_piece_yellow80"/>
+
+    <ImageView
+        android:id="@+id/token31"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token30"
+        app:layout_constraintEnd_toStartOf="@+id/token32"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token30"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token32"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token31"
+        app:layout_constraintEnd_toStartOf="@+id/token33"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token31"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+    <ImageView
+        android:id="@+id/token33"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token32"
+        app:layout_constraintEnd_toStartOf="@+id/token34"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token32"
+        app:srcCompat="@drawable/game_piece_red80"/>
+
+    <ImageView
+        android:id="@+id/token34"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token33"
+        app:layout_constraintEnd_toStartOf="@+id/token35"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token33"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+    <ImageView
+        android:id="@+id/token35"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token34"
+        app:layout_constraintEnd_toStartOf="@+id/token36"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token34"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token36"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token35"
+        app:layout_constraintEnd_toEndOf="@+id/token46"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+    <ImageView
+        android:id="@+id/token40"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/token30"
+        app:layout_constraintStart_toStartOf="@+id/token50"
+        app:layout_constraintTop_toBottomOf="@+id/token50"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token41"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token40"
+        app:layout_constraintEnd_toStartOf="@+id/token42"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token40"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+    <ImageView
+        android:id="@+id/token42"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token41"
+        app:layout_constraintEnd_toStartOf="@+id/token43"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token41"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token43"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token42"
+        app:layout_constraintEnd_toStartOf="@+id/token44"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token42"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+    <ImageView
+        android:id="@+id/token44"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token43"
+        app:layout_constraintEnd_toStartOf="@+id/token45"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token43"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token45"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token44"
+        app:layout_constraintEnd_toStartOf="@+id/token46"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token44"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+    <ImageView
+        android:id="@+id/token46"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token45"
+        app:layout_constraintEnd_toEndOf="@+id/token56"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token50"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/token40"
+        app:layout_constraintEnd_toStartOf="@+id/token51"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/gameBoard"
+        app:layout_constraintTop_toTopOf="@+id/gameBoard"
+        app:srcCompat="@drawable/game_piece_yellow80"/>
+
+    <ImageView
+        android:id="@+id/token51"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token50"
+        app:layout_constraintEnd_toStartOf="@+id/token52"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token50"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token52"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token51"
+        app:layout_constraintEnd_toStartOf="@+id/token53"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token51"
+        app:srcCompat="@drawable/game_piece_yellow80"/>
+
+    <ImageView
+        android:id="@+id/token53"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token52"
+        app:layout_constraintEnd_toStartOf="@+id/token54"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token52"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token54"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token53"
+        app:layout_constraintEnd_toStartOf="@+id/token55"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token53"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+    <ImageView
+        android:id="@+id/token55"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token54"
+        app:layout_constraintEnd_toStartOf="@+id/token56"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token54"
+        app:srcCompat="@drawable/game_piece_red80" />
+
+    <ImageView
+        android:id="@+id/token56"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/token55"
+        app:layout_constraintEnd_toEndOf="@+id/gameBoard"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/token55"
+        app:srcCompat="@drawable/game_piece_yellow80" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
