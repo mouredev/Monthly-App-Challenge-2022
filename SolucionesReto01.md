@@ -44,4 +44,9 @@ Desktop Java
 
 * [https://github.com/braiso-22/Conecta4-Java](https://github.com/braiso-22/Conecta4-Java)
 
+Javascript
+
+* [https://github.com/riem-programming/frontend-basic](https://github.com/riem-programming/frontend-basic/tree/main/Javascript/connect-4)
+
+
 [**CONSULTA TODOS LOS RETOS**](./README.md)
